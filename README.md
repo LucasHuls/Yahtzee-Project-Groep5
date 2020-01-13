@@ -27,9 +27,9 @@
 | :---:        									 |     :---:      							   |
 | <img src="x" width="500">   | <img src="x" width="500">     |
 
-## Rekenmachine
+## Yahtzee
 
-> Omschrijving
+Spelregels:
 
 ## Instalatie
 
@@ -42,7 +42,7 @@ git clone https://github.com/LucasHuls/Yahtzee-Project-Groep5
 | Lucas Huls    						  | Bram van Nek 						   | Julian Moreno 		   					 | Sam Elfring 							| Jesse Overveld | Jasper Tempelman |
 | ------------- 						  | ------------- 						   | ------------- 		   					 | -------------  						| ------------- | ------------- |
 | <img src="readme-bestanden/Lucas.png">  | <img src="readme-bestanden/Bram.png">  | <img src="readme-bestanden/Julian.png"> | <img src="readme-bestanden/Sam.png"> | <img src="readme-bestanden/Jesse.png"> | <img src="readme-bestanden/Jasper.png"> |
-| Notulist      						  | Deelnemer  							   | Deelnemer 								 | Bord-Schrijver  						| Scrumleader | Deelnemer |
+| Notulist      						  | Deelnemer  							   | Deelnemer 								 | Scrumleader  						| BordSchrijver | Deelnemer |
 
 ## Contact
 Voor bugs en problemen kun je beter een issue achter laten klik <a href="https://github.com/LucasHuls/Yahtzee-Project-Groep5">hier</a>
@@ -56,6 +56,8 @@ Sam Elfring = 0318893@student.rocvantwente.nl
 Lucas Huls  = 0320242@student.rocvantwente.nl
 <br>
 Julian Moreno = 0317851@student.rocvantwente.nl
+<br>
+Jasper Tempelman = 0275910@student.rocvantwente.nl
 <br>
 
 ## Handige Info
