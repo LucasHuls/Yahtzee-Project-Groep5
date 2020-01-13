@@ -27,7 +27,7 @@
 | :---:        									 |     :---:      							   |
 | <img src="x" width="500">   | <img src="x" width="500">     |
 
-## Rekenmachine
+## Yahtzee
 
 > Omschrijving
 
@@ -56,6 +56,8 @@ Sam Elfring = 0318893@student.rocvantwente.nl
 Lucas Huls  = 0320242@student.rocvantwente.nl
 <br>
 Julian Moreno = 0317851@student.rocvantwente.nl
+<br>
+Jasper Tempelman = 0275910@student.rocvantwente.nl
 <br>
 
 ## Handige Info
