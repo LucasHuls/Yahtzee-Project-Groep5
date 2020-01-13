@@ -24,21 +24,135 @@ namespace Yahtzee
         {
             InitializeComponent();
         }
+        //Public variabelen
+        public Random rnd = new Random();
+        public int alRandom = 0;
+        public int aantalGooien = 0;
+        //De dobbelstenen
+        public int dobbelsteen1 = 0;
+        public int dobbelsteen2 = 0;
+        public int dobbelsteen3 = 0;
+        public int dobbelsteen4 = 0;
+        public int dobbelsteen5 = 0;
+        //Gestopte dobbelstenen
+        public bool alGestoptDobbelsteen1 = false;
+        public bool alGestoptDobbelsteen2 = false;
+        public bool alGestoptDobbelsteen3 = false;
+        public bool alGestoptDobbelsteen4 = false;
+        public bool alGestoptDobbelsteen5 = false;
 
         private void rollen_Click(object sender, RoutedEventArgs e)
         {
-            int dobbel1 = rnd.Next(1, 7);
-            int dobbel2 = rnd.Next(1, 7);
-            int dobbel3 = rnd.Next(1, 7);
-            int dobbel4 = rnd.Next(1, 7);
-            int dobbel5 = rnd.Next(1, 7);
-            int[] Scores = { dobbel1, dobbel2, dobbel3, dobbel4, dobbel5 };
-            this.dobbeltt1.Text = Convert.ToString(dobbel1);
-            this.dobbeltt2.Text = Convert.ToString(dobbel2);
-            this.dobbeltt3.Text = Convert.ToString(dobbel3);
-            this.dobbeltt4.Text = Convert.ToString(dobbel4);
-            this.dobbeltt5.Text = Convert.ToString(dobbel5);
+            RandomGetallen(); //RandomGetallen functie aanroepen
+
+            if (aantalGooien < 3) //Zorgt ervoor dat er niet vaker dan 3 keer kan worden gegooid
+            {
+                //Als er op de stop knop is geklikt van een dobbelsteen moet hij het getal niet meer veranderen
+                if (alGestoptDobbelsteen1 != true)
+                {
+                    dobbeltt1.Text = Convert.ToString(dobbelsteen1);
+                }
+                if (alGestoptDobbelsteen2 != true)
+                {
+                    dobbeltt2.Text = Convert.ToString(dobbelsteen2);
+                }
+                if (alGestoptDobbelsteen3 != true)
+                {
+                    dobbeltt3.Text = Convert.ToString(dobbelsteen3);
+                }
+                if (alGestoptDobbelsteen4 != true)
+                {
+                    dobbeltt4.Text = Convert.ToString(dobbelsteen4);
+                }
+                if (alGestoptDobbelsteen5 != true)
+                {
+                    dobbeltt5.Text = Convert.ToString(dobbelsteen5);
+                }
+                aantalGooien +=1;
+            }
+            else
+            {
+                waarschuwingen.Text = "Je hebt al 3 keer gegooid"; //Als er 3 keer is gegooid en de speler wil nog een keer gooien komt dit er te staan
+            }
         }
-        public Random rnd = new Random();
+        private void RandomGetallen()
+        {
+            if(alRandom < 3) //Zorgt ervoor dat de dobbelstenen maximaal 3 keer een random getal krijgen
+            {
+                //Random getal kiezen voor elke dobbelsteen
+                dobbelsteen1 = rnd.Next(1, 7);
+                dobbelsteen2 = rnd.Next(1, 7);
+                dobbelsteen3 = rnd.Next(1, 7);
+                dobbelsteen4 = rnd.Next(1, 7);
+                dobbelsteen5 = rnd.Next(1, 7);
+                alRandom += 1;
+            }
+        }
+        private void DobbelVast1Klik(object sender, RoutedEventArgs e)
+        {
+            if (alGestoptDobbelsteen1 != true) //Zorgt ervoor dat de code niet wordt uitgevoerd als er op de stop knop is geklikt
+            {
+                string vast = Convert.ToString(dobbelsteen1);
+                dobbeltt1.Text = vast;
+                dobbeltt1.IsEnabled = false;
+                alGestoptDobbelsteen1 = true;
+            }
+        }
+        private void DobbelVast2Klik(object sender, RoutedEventArgs e)
+        {
+            if (alGestoptDobbelsteen2 != true)
+            {
+                string vast = Convert.ToString(dobbelsteen2);
+                dobbeltt2.Text = vast;
+                dobbeltt2.IsEnabled = false;
+                alGestoptDobbelsteen2 = true;
+            }
+        }
+        private void DobbelVast3Klik(object sender, RoutedEventArgs e)
+        {
+            if (alGestoptDobbelsteen3 != true)
+            {
+                string vast = Convert.ToString(dobbelsteen3);
+                dobbeltt3.Text = vast;
+                dobbeltt3.IsEnabled = false;
+                alGestoptDobbelsteen3 = true;
+            }
+        }
+        private void DobbelVast4Klik(object sender, RoutedEventArgs e)
+        {
+            if (alGestoptDobbelsteen4 != true)
+            {
+                string vast = Convert.ToString(dobbelsteen4);
+                dobbeltt4.Text = vast;
+                dobbeltt4.IsEnabled = false;
+                alGestoptDobbelsteen4 = true;
+            }
+        }
+        private void DobbelVast5Klik(object sender, RoutedEventArgs e)
+        {
+            if (alGestoptDobbelsteen5 != true)
+            {
+                string vast = Convert.ToString(dobbelsteen5);
+                dobbeltt5.Text = vast;
+                dobbeltt5.IsEnabled = false;
+                alGestoptDobbelsteen5 = true;
+            }
+        }
+        private void AllesGestopt()
+        {
+            if (alGestoptDobbelsteen1 == true && alGestoptDobbelsteen2 == true && alGestoptDobbelsteen3 == true && alGestoptDobbelsteen4 == true && alGestoptDobbelsteen5 == true)
+            {
+
+            }
+            else if (aantalGooien > 3)
+            {
+                //Dobbelstenen stoppen
+                dobbeltt1.IsEnabled = false;
+                dobbeltt2.IsEnabled = false;
+                dobbeltt3.IsEnabled = false;
+                dobbeltt4.IsEnabled = false;
+                dobbeltt5.IsEnabled = false;
+            }
+        }
     }
 }

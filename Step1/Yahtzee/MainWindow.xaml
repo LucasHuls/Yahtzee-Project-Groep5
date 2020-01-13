@@ -28,14 +28,22 @@
         <!--Knoppen-->
         <Button x:Name="spelregels" Grid.Column="5" Grid.Row="0" Content="Spelregels" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
         <Button x:Name="rollen" Grid.Column="4" Grid.Row="0" Content="Rol Dobbelsteen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="rollen_Click"/>
+        <Button x:Name="dobbelVast1Knop" Content="Stop" Grid.Column="0" Grid.Row="4" Click="DobbelVast1Klik"/>
+        <Button x:Name="dobbelVast2Knop" Content="Stop" Grid.Column="1" Grid.Row="4" Click="DobbelVast2Klik"/>
+        <Button x:Name="dobbelVast3Knop" Content="Stop" Grid.Column="2" Grid.Row="4" Click="DobbelVast3Klik"/>
+        <Button x:Name="dobbelVast4Knop" Content="Stop" Grid.Column="3" Grid.Row="4" Click="DobbelVast4Klik"/>
+        <Button x:Name="dobbelVast5Knop" Content="Stop" Grid.Column="4" Grid.Row="4" Click="DobbelVast5Klik"/>
 
         <!--Teksten-->
-        <TextBlock Text="Yahtzee" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="50"/>
-        <TextBlock x:Name="dobbeltt1" Grid.Column="1" HorizontalAlignment="Left" Margin="42.2,30.2,0,0" Grid.Row="2" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="dobbeltt2" Grid.Column="1" HorizontalAlignment="Left" Margin="42.2,26.8,0,0" Grid.Row="3" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="dobbeltt3" Grid.Column="2" HorizontalAlignment="Left" Margin="44.4,30.2,0,0" Grid.Row="2" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="dobbeltt4" Grid.Column="2" HorizontalAlignment="Left" Margin="44.4,26.8,0,0" Grid.Row="3" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="dobbeltt5" Grid.Column="1" HorizontalAlignment="Left" Margin="42.2,28.2,0,0" Grid.Row="4" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="logo" Text="Yahtzee" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="50"/>
+        <TextBlock x:Name="waarschuwingen" Text="Veel Plezier" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
+        
+        <TextBlock x:Name="dobbeltt1" HorizontalAlignment="Left" Margin="55,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
+        <TextBlock x:Name="dobbeltt2" Grid.Column="1" HorizontalAlignment="Left" Margin="42.2,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
+        <TextBlock x:Name="dobbeltt3" Grid.Column="2" HorizontalAlignment="Left" Margin="67.4,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
+        <TextBlock x:Name="dobbeltt4" Grid.Column="3" HorizontalAlignment="Left" Margin="65.4,26.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
+        <TextBlock x:Name="dobbeltt5" Grid.Column="4" HorizontalAlignment="Left" Margin="66.4,26.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
+
 
 
     </Grid>
