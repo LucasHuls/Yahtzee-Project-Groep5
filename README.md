@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/LucasHuls/Yahtzee-Project-Groep5">
-    <img src="readme-bestanden/Logo_1240x600.png" alt="Logo">
+    <img src="readme-bestanden/rocvtlogo.jpg" alt="Logo">
   </a>
 
   <h3 align="center">Scrum Groep 5</h3>
@@ -23,13 +23,13 @@
 
 ## Designs
 
-| Laad-Scherm 									 | Rekenmachine-Design 						   |
+| Scherm-1 									 | Design-1 						   |
 | :---:        									 |     :---:      							   |
-| <img src="readme-bestanden/laad-scherm.png" width="500">   | <img src="readme-bestanden/design.png" width="500">     |
+| <img src="x" width="500">   | <img src="x" width="500">     |
 
 ## Rekenmachine
 
-> Jullie gaan voor het bedrijf Calc4You een applicatie realiseren. Dit bedrijf ontwikkeld oplossingen om mensen te helpen bij rekenen en het inzichtelijk krijgen van hun inkomsten en uitgaven. Hiervoor hebben ze een methode ontwikkeld waarin ze hun klanten laten oefenen met verschillende opdrachten. In deze opdrachten moet er gerekend worden ze willen voor dit doel een rekenmachine applicatie laten ontwikkelen. Maar zij hebben geen Software Ontwikkelaars in dienst, ze hebben daarom aan jullie scrum groep gevraagd om zo'n applicatie voor hun te ontwikkelen. Om duidelijk te krijgen wat er ontwikkeld moet worden gaan jullie in gesprek met jullie coach/product owner om duidelijk te krijgen wat de wensen en eisen zijn. Het is aan jullie om hem uit te nodigen voor een gesprek! 
+> Omschrijving
 
 ## Instalatie
 
