@@ -1,0 +1,14 @@
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.exe.config
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.exe
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.pdb
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.csprojAssemblyReference.cache
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\MainWindow.g.cs
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\App.g.cs
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.cache
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.lref
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\MainWindow.baml
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.g.resources
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.Properties.Resources.resources
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.csproj.GenerateResource.cache
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.exe
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.pdb

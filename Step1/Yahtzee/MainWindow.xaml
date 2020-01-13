@@ -27,6 +27,7 @@
 
         <!--Knoppen-->
         <Button x:Name="spelregels" Grid.Column="5" Grid.Row="0" Content="Spelregels" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <Button x:Name="rollen" Grid.Column="4" Grid.Row="0" Content="Rol Dobbelsteen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
         <!--Teksten-->
         <TextBlock Text="Yahtzee" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="50"/>
