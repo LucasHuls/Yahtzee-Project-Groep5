@@ -27,10 +27,15 @@
 
         <!--Knoppen-->
         <Button x:Name="spelregels" Grid.Column="5" Grid.Row="0" Content="Spelregels" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-        <Button x:Name="rollen" Grid.Column="4" Grid.Row="0" Content="Rol Dobbelsteen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <Button x:Name="rollen" Grid.Column="4" Grid.Row="0" Content="Rol Dobbelsteen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="rollen_Click"/>
 
         <!--Teksten-->
         <TextBlock Text="Yahtzee" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="50"/>
+        <TextBlock x:Name="dobbeltt1" Grid.Column="1" HorizontalAlignment="Left" Margin="42.2,30.2,0,0" Grid.Row="2" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="dobbeltt2" Grid.Column="1" HorizontalAlignment="Left" Margin="42.2,26.8,0,0" Grid.Row="3" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="dobbeltt3" Grid.Column="2" HorizontalAlignment="Left" Margin="44.4,30.2,0,0" Grid.Row="2" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="dobbeltt4" Grid.Column="2" HorizontalAlignment="Left" Margin="44.4,26.8,0,0" Grid.Row="3" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="dobbeltt5" Grid.Column="1" HorizontalAlignment="Left" Margin="42.2,28.2,0,0" Grid.Row="4" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
 
 
     </Grid>
