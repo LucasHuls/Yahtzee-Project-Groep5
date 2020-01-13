@@ -29,7 +29,7 @@
 
 ## Yahtzee
 
-> Omschrijving
+Spelregels:
 
 ## Instalatie
 
