@@ -27,11 +27,11 @@ namespace Yahtzee
 
         private void rollen_Click(object sender, RoutedEventArgs e)
         {
-            int dobbel1 = rnd.Next(1, 6);
-            int dobbel2 = rnd.Next(1, 6);
-            int dobbel3 = rnd.Next(1, 6);
-            int dobbel4 = rnd.Next(1, 6);
-            int dobbel5 = rnd.Next(1, 6);
+            int dobbel1 = rnd.Next(1, 7);
+            int dobbel2 = rnd.Next(1, 7);
+            int dobbel3 = rnd.Next(1, 7);
+            int dobbel4 = rnd.Next(1, 7);
+            int dobbel5 = rnd.Next(1, 7);
             int[] Scores = { dobbel1, dobbel2, dobbel3, dobbel4, dobbel5 };
             this.dobbeltt1.Text = Convert.ToString(dobbel1);
             this.dobbeltt2.Text = Convert.ToString(dobbel2);
