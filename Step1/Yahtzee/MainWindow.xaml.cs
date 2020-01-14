@@ -43,7 +43,7 @@ namespace Yahtzee
         //Score van de speler
         int score;
 
-        private void rollen_Click(object sender, RoutedEventArgs e)
+        private void Rollen_Click(object sender, RoutedEventArgs e)
         {
             RandomGetallen(); //RandomGetallen functie aanroepen
 
@@ -157,7 +157,7 @@ namespace Yahtzee
             {
                 Punten();
             }
-            else if (aantalGooien > 3)
+            else if (aantalGooien == 3)
             {
                 //Dobbelstenen stoppen
                 dobbeltt1.IsEnabled = false;
@@ -165,6 +165,17 @@ namespace Yahtzee
                 dobbeltt3.IsEnabled = false;
                 dobbeltt4.IsEnabled = false;
                 dobbeltt5.IsEnabled = false;
+
+                dobbelVast1Knop.Opacity = 0;
+                dobbelVast2Knop.Opacity = 0;
+                dobbelVast3Knop.Opacity = 0;
+                dobbelVast4Knop.Opacity = 0;
+                dobbelVast5Knop.Opacity = 0;
+                dobbelVast1Knop.IsEnabled = false;
+                dobbelVast2Knop.IsEnabled = false;
+                dobbelVast3Knop.IsEnabled = false;
+                dobbelVast4Knop.IsEnabled = false;
+                dobbelVast5Knop.IsEnabled = false;
 
                 Punten();
             }
@@ -187,20 +198,26 @@ namespace Yahtzee
               Kans: De score is het totaal aantal ogen van alle dobbelstenen.
               Yahtzee: 50 punten als alle dobbelstenen hetzelfde aantal ogen hebben.*/
 
+            
+
             //Kleine Straat
             if (Array.Exists(dobbelstenen, element => element == 1) && Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4)
                 || Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5)
                 || Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5) && Array.Exists(dobbelstenen, element => element == 6))
             {
                 score += 30;
-                scoreTekst.Text = Convert.ToString(score);
-            }
 
-            //Grote Straat
-            if (Array.Exists(dobbelstenen, element => element == 1) && Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5)
+                //Grote straat
+                if (Array.Exists(dobbelstenen, element => element == 1) && Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5)
                 || Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5) && Array.Exists(dobbelstenen, element => element == 6))
-            {
-                score += 40;
+                {
+                    score += 10;
+                    waarschuwingen.Text = "Grote Straat!";
+                }
+                else
+                {
+                    waarschuwingen.Text = "Kleine Straat";
+                }
                 scoreTekst.Text = Convert.ToString(score);
             }
 
@@ -217,6 +234,7 @@ namespace Yahtzee
                             {
                                 score += 50;
                                 scoreTekst.Text = Convert.ToString(score);
+                                waarschuwingen.Text = "YATHZEE!";
                             }
                         }
                     }
