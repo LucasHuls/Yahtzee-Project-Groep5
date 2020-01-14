@@ -37,6 +37,8 @@
         <!--Teksten-->
         <TextBlock x:Name="logo" Text="Yahtzee" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="50"/>
         <TextBlock x:Name="waarschuwingen" Text="Veel Plezier" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
+        <TextBlock x:Name="scorePlaceholder" Text="Score :" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
+        <TextBlock x:Name="scoreTekst" Text="0" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
         
         <TextBlock x:Name="dobbeltt1" HorizontalAlignment="Left" Margin="55,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
         <TextBlock x:Name="dobbeltt2" Grid.Column="1" HorizontalAlignment="Left" Margin="42.2,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
