@@ -14,7 +14,6 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -23,12 +22,12 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--Knoppen-->
-        <Button x:Name="spelregels" Grid.Column="6" Grid.Row="0" Content="Spelregels" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-        <Button x:Name="opnieuw" Grid.Column="6" Grid.Row="6" Content="opnieuw" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-        <Button x:Name="rollen" Grid.Column="5" Grid.Row="0" Content="Rol Dobbelsteen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="rollen_Click" RenderTransformOrigin="0.485,0.518" Grid.ColumnSpan="2" Margin="3.8,0,112.6,0"/>
+        <Button x:Name="spelregels" Grid.Column="5" Grid.Row="0" Content="Spelregels" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <Button x:Name="rollen" Grid.Column="4" Grid.Row="0" Content="Rol Dobbelsteen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Rollen_Click"/>
         <Button x:Name="dobbelVast1Knop" Content="Stop" Grid.Column="0" Grid.Row="4" Click="DobbelVast1Klik"/>
         <Button x:Name="dobbelVast2Knop" Content="Stop" Grid.Column="1" Grid.Row="4" Click="DobbelVast2Klik"/>
         <Button x:Name="dobbelVast3Knop" Content="Stop" Grid.Column="2" Grid.Row="4" Click="DobbelVast3Klik"/>
@@ -36,15 +35,12 @@
         <Button x:Name="dobbelVast5Knop" Content="Stop" Grid.Column="4" Grid.Row="4" Click="DobbelVast5Klik"/>
 
         <!--Teksten-->
-        <TextBlock x:Name="logo" Text="Yahtyeet" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="50"/>
+        <TextBlock x:Name="logo" Text="Yahtzee" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="50"/>
         <TextBlock x:Name="waarschuwingen" Text="Veel Plezier" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
         <TextBlock x:Name="scorePlaceholder" Text="Score :" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
         <TextBlock x:Name="scoreTekst" Text="0" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
-<<<<<<< HEAD
         <TextBlock x:Name="rondeScorePlaceholder" Text="Ronde Score :" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
         <TextBlock x:Name="rondeScoreTekst" Text="0" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25" Margin="34.4,0.2,97.6,68.8" Grid.RowSpan="2"/>
-=======
->>>>>>> 3f18df84bcd3add4df3f31bde8a64ba9e0f9c2be
 
         <TextBlock x:Name="dobbeltt1" HorizontalAlignment="Left" Margin="55,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
         <TextBlock x:Name="dobbeltt2" Grid.Column="1" HorizontalAlignment="Left" Margin="42.2,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
