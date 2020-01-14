@@ -26,7 +26,6 @@ namespace Yahtzee
         }
         //Public variabelen
         public Random rnd = new Random();
-        public int alRandom = 0;
         public int aantalGooien = 0;
         //Beurt
         public int beurt = 1; //Moet 1 zijn omdat hij bij beurt 1 start niet beurt 0!!
@@ -44,6 +43,7 @@ namespace Yahtzee
         public bool alGestoptDobbelsteen5 = false;
         //Score van de speler
         int score;
+        int rondeScore;
 
         private void Rollen_Click(object sender, RoutedEventArgs e)
         {
@@ -156,17 +156,25 @@ namespace Yahtzee
         {
             if (alGestoptDobbelsteen1 == true && alGestoptDobbelsteen2 == true && alGestoptDobbelsteen3 == true && alGestoptDobbelsteen4 == true && alGestoptDobbelsteen5 == true)
             {
+                rollen.IsEnabled = false;
+                rollen.Opacity = 0;
                 Punten();
             }
             else if (aantalGooien == 3)
             {
                 //Dobbelstenen stoppen
+                dobbelsteen1 = 0;
+                dobbelsteen2 = 0;
+                dobbelsteen3 = 0;
+                dobbelsteen4 = 0;
+                dobbelsteen5 = 0;
+
                 dobbeltt1.IsEnabled = false;
                 dobbeltt2.IsEnabled = false;
                 dobbeltt3.IsEnabled = false;
                 dobbeltt4.IsEnabled = false;
                 dobbeltt5.IsEnabled = false;
-
+                
                 dobbelVast1Knop.Opacity = 0;
                 dobbelVast2Knop.Opacity = 0;
                 dobbelVast3Knop.Opacity = 0;
@@ -177,6 +185,9 @@ namespace Yahtzee
                 dobbelVast3Knop.IsEnabled = false;
                 dobbelVast4Knop.IsEnabled = false;
                 dobbelVast5Knop.IsEnabled = false;
+
+                rollen.IsEnabled = false;
+                rollen.Opacity = 0;
 
                 Punten();
             }
@@ -190,7 +201,6 @@ namespace Yahtzee
             dobbelsteen5 = Convert.ToInt32(dobbeltt5.Text);
             int[] dobbelstenen = {dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5};
             int totaalScore = dobbelsteen1 + dobbelsteen2 + dobbelsteen3 + dobbelsteen4 + dobbelsteen5;
-            int rondeScore = 0;
 
             /*Drie gelijke: De score is het totaal van alle ogen, als er minstens 3 dobbelstenen met hetzelfde aantal ogen zijn.
               Vier gelijke: De score is het totaal van alle ogen, als er minstens 4 dobbelstenen met hetzelfde aantal ogen zijn.
@@ -253,6 +263,60 @@ namespace Yahtzee
                 scoreTekst.Text = Convert.ToString(score);
                 rondeScoreTekst.Text = Convert.ToString(rondeScore);
                 waarschuwingen.Text = "Kans";
+            }
+
+            volgendeBeurt.Opacity = 1;
+            volgendeBeurt.IsEnabled = true;
+        }
+
+        private void VolgendeBeurtKlik(object sender, RoutedEventArgs e)
+        {
+            if (beurt < 5)
+            {
+                rondeScore = 0;
+                beurt += 1;
+                rondeScoreTekst.Text = "0";
+
+                dobbeltt1.IsEnabled = true;
+                dobbeltt2.IsEnabled = true;
+                dobbeltt3.IsEnabled = true;
+                dobbeltt4.IsEnabled = true;
+                dobbeltt5.IsEnabled = true;
+
+                dobbelVast1Knop.Opacity = 1;
+                dobbelVast2Knop.Opacity = 1;
+                dobbelVast3Knop.Opacity = 1;
+                dobbelVast4Knop.Opacity = 1;
+                dobbelVast5Knop.Opacity = 1;
+                dobbelVast1Knop.IsEnabled = true;
+                dobbelVast2Knop.IsEnabled = true;
+                dobbelVast3Knop.IsEnabled = true;
+                dobbelVast4Knop.IsEnabled = true;
+                dobbelVast5Knop.IsEnabled = true;
+
+                alGestoptDobbelsteen1 = false;
+                alGestoptDobbelsteen2 = false;
+                alGestoptDobbelsteen3 = false;
+                alGestoptDobbelsteen4 = false;
+                alGestoptDobbelsteen5 = false;
+
+                aantalGooien = 0;
+
+                dobbeltt1.Text = "0";
+                dobbeltt2.Text = "0";
+                dobbeltt3.Text = "0";
+                dobbeltt4.Text = "0";
+                dobbeltt5.Text = "0";
+
+                rollen.IsEnabled = true;
+                rollen.Opacity = 1;
+
+                volgendeBeurt.IsEnabled = false;
+                volgendeBeurt.Opacity = 0;
+            }
+            else
+            {
+                waarschuwingen.Text = "Spel Afgelopen";
             }
         }
     }
