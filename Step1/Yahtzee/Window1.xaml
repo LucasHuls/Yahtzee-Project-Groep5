@@ -1,0 +1,49 @@
+﻿<Window x:Class="Yahtzee.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Yahtzee"
+        mc:Ignorable="d"
+        Title="Window1" Height="491.4" Width="853.2">
+    <Grid>
+        <Button Content="Terug" HorizontalAlignment="Left" Margin="55,389,0,0" VerticalAlignment="Top" Width="75" Height="46" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="155,22,0,-165.4" TextWrapping="Wrap" Text="Tijdens een beurt mag een speler de dobbelstenen ten hoogste drie keer werpen. Bij de eerste en tweede worp kan hij enkele dobbelstenen opzij leggen en enkel de andere opnieuw werpen. Na de derde beurt is hij verplicht om zijn combinatie onder te brengen in een van de dertien categorieën. Dit mag ook na de eerste of tweede worp. Nadat de speler een categorie ingevuld heeft, is de volgende speler aan de beurt. 
+Spelregels Yahtzee
+Een speler moet elke categorie één keer invullen tijdens het spel. Dit betekent dat het kan gebeuren dat een speler nul punten scoort in een bepaalde categorie. Nadat de spelers in alle categorieën een combinatie ingevuld hebben, tellen zij hun punten op. De speler met het hoogste aantal punten is de winnaar. Er worden ook wedstrijden van vijf ronden gespeeld, waarbij de speler met het hoogste puntentotaal na vijf ronden wordt uitgeroepen tot algehele winnaar. Het spel kan ook alleen gespeeld worden. De speler kan dan een lijst met hoogste scores bijhouden.
+Er zijn twee soorten categorieën:
+Bovenste vakken: de nummercombinaties 1 t/m 6.
+Onderste vakken: pokerachtige combinaties.
+Bovenste vakken
+Bij de vakken 1 t/m 6 is het aantal punten gelijk aan het aantal keer dat een dobbelsteen het overeenkomstige aantal ogen aanwijst, vermenigvuldigd met het aantal ogen.
+
+Als een speler 63 punten of meer behaalt in de bovenste vakken (bijvoorbeeld door in al deze vakken een worp met ten minste drie keer de juiste dobbelsteen te noteren), dan krijgt hij 35 bonuspunten.
+Onderste vakken
+Drie gelijke: De score is het totaal van alle ogen, als er minstens 3 dobbelstenen met hetzelfde aantal ogen zijn.
+Vier gelijke: De score is het totaal van alle ogen, als er minstens 4 dobbelstenen met hetzelfde aantal ogen zijn.
+Kleine straat: 30 punten voor 4 oplopende dobbelstenen. 
+Grote straat: 40 punten voor 5 oplopende dobbelstenen. 
+Full House: 25 punten voor 3 gelijke en één paar. (5 gelijke telt niet als Full House,
+tenzij het vak Yahtzee reeds ingevuld is).
+Kans: De score is het totaal aantal ogen van alle dobbelstenen.
+Yahtzee: 50 punten als alle dobbelstenen hetzelfde aantal ogen hebben.
+
+
+Combinatie	Aantal punten
+Drie gelijke	Totaal aantal ogen
+Vier gelijke	Totaal aantal ogen
+Kleine straat	30
+Grote straat	40
+Full House	25
+Kans	Totaal aantal ogen
+Yahtzee	50
+Yahtzee-bonus
+De speler kan een Yahtzee-bonus scoren als hij meerdere keren vijf gelijke dobbelstenen heeft in hetzelfde spel. Voorwaarde is dat de eerste Yahtzee genoteerd is met 50 punten en niet 0 is. De bonus bedraagt 100 punten voor de tweede en elke volgende yahtzee. De combinatie wordt tijdens dezelfde beurt ook in een andere categorie ingevuld.
+Als het Yahtzee-vakje al is ingevuld (met 0 of 50 punten) dan geldt de combinatie ook als Full House (25 punten), Kleine straat (30 punten) of Grote straat (40 punten). Voorwaarde is dat het vakje uit de lijst 1 t/m 6 van het aantal ogen van de Yahtzee reeds is ingevuld.
+" VerticalAlignment="Top" Height="605" Width="600"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,22,0,0" TextWrapping="Wrap" Text="Spelregels" VerticalAlignment="Top" Height="50" Width="100"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="30,289,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Margin="0,289,696.4,102.6" Source="Yat logo.png" Stretch="Fill"/>
+
+    </Grid>
+</Window>

@@ -255,5 +255,12 @@ namespace Yahtzee
                 waarschuwingen.Text = "Kans";
             }
         }
+
+        private void spelregels_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 sw = new Window1();
+            sw.Show();
+            this.Close();
+        }
     }
 }

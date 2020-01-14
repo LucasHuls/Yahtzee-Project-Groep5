@@ -26,7 +26,7 @@
         </Grid.RowDefinitions>
 
         <!--Knoppen-->
-        <Button x:Name="spelregels" Grid.Column="6" Grid.Row="0" Content="Spelregels" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <Button x:Name="spelregels" Grid.Column="6" Grid.Row="0" Content="Spelregels" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="spelregels_Click"/>
         <Button x:Name="volgendeBeurt" Grid.Column="6" Grid.Row="6" Content="Volgende Beurt" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
         <Button x:Name="rollen" Grid.Column="5" Grid.Row="0" Content="Rol Dobbelsteen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Rollen_Click"/>
         <Button x:Name="dobbelVast1Knop" Content="Stop" Grid.Column="0" Grid.Row="4" Click="DobbelVast1Klik"/>
