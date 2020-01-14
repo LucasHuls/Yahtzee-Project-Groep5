@@ -29,7 +29,7 @@
 
 ## Yahtzee
 
-Spelregels:
+Het dobbelspel Yahtzee is wereldwijd bekend en is ook in ons land razend populair. Het spel wordt gespeeld met vijf dobbelstenen en scoreblok, waar het ook een zeer compact spel is. Elke deelnemer mag bij elke beurt driemaal de dobbelstenen werpen. De bedoeling is om een zo’n hoog mogelijke score te bereiken, deze kan vervolgens worden opgeschreven op het scoreblokje. De deelnemer mag bij de eerste twee worpen zijn stenen apart leggen en met de overige dobbelstenen gooien. Echter na de derde worp staat de score vast en is dat niet meer mogelijk. Er moeten steeds combinaties van het scoreblok worden gehaald. Het is natuurlijk ook een mogelijkheid dat de gewenste combinatie al bij de eerste worp tot stand zal komen. Het is niet verplicht om drie keer te gooien met de dobbelstenen.
 
 ## Instalatie
 
@@ -61,4 +61,4 @@ Jasper Tempelman = 0275910@student.rocvantwente.nl
 <br>
 
 ## Handige Info
-Project Link: [https://github.com/LucasHuls/Yahtzee-Project-Groep5
+Project Link: https://github.com/LucasHuls/Yahtzee-Project-Groep5
