@@ -28,6 +28,8 @@ namespace Yahtzee
         public Random rnd = new Random();
         public int alRandom = 0;
         public int aantalGooien = 0;
+        //Beurt
+        public int beurt = 1; //Moet 1 zijn omdat hij bij beurt 1 start niet beurt 0!!
         //De dobbelstenen
         public int dobbelsteen1 = 0;
         public int dobbelsteen2 = 0;
@@ -80,7 +82,7 @@ namespace Yahtzee
         }
         private void RandomGetallen()
         {
-            if(alRandom < 3) //Zorgt ervoor dat de dobbelstenen maximaal 3 keer een random getal krijgen
+            if(aantalGooien < 3) //Zorgt ervoor dat de dobbelstenen maximaal 3 keer een random getal krijgen
             {
                 //Random getal kiezen voor elke dobbelsteen
                 dobbelsteen1 = rnd.Next(1, 7);
@@ -88,7 +90,6 @@ namespace Yahtzee
                 dobbelsteen3 = rnd.Next(1, 7);
                 dobbelsteen4 = rnd.Next(1, 7);
                 dobbelsteen5 = rnd.Next(1, 7);
-                alRandom += 1;
             }
         }
         private void DobbelVast1Klik(object sender, RoutedEventArgs e)
@@ -248,6 +249,7 @@ namespace Yahtzee
                 int optel = dobbelstenen[0] + dobbelstenen[1] + dobbelstenen[2] + dobbelstenen[3] + dobbelstenen[4];
                 score += optel;
                 rondeScore += optel;
+
                 scoreTekst.Text = Convert.ToString(score);
                 rondeScoreTekst.Text = Convert.ToString(rondeScore);
                 waarschuwingen.Text = "Kans";
