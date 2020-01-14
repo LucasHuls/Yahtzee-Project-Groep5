@@ -230,12 +230,9 @@ namespace Yahtzee
                     {
                         if (dobbelstenen[3] == dobbelstenen[4])
                         {
-                            if (dobbelstenen[4] == dobbelstenen[5])
-                            {
                                 score += 50;
                                 scoreTekst.Text = Convert.ToString(score);
                                 waarschuwingen.Text = "YATHZEE!";
-                            }
                         }
                     }
                 }
