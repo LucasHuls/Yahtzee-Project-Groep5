@@ -319,5 +319,12 @@ namespace Yahtzee
                 waarschuwingen.Text = "Spel Afgelopen";
             }
         }
+
+        private void spelregels_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 sw = new Window1();
+            sw.Show();
+            this.Close();
+        }
     }
 }
