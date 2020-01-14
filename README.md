@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/LucasHuls/Yahtzee-Project-Groep5">
-    <img src="readme-bestanden/logo.png" alt="Logo">
+    <img src="readme-bestanden/zes.png" alt="Logo">
   </a>
 
   <h3 align="center">Scrum Groep 5</h3>
