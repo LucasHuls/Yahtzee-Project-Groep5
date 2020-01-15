@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Yahtzee"
         mc:Ignorable="d"
-        Title="Window1" Height="557.8" Width="853.2">
+        MinHeight="580"
+        MinWidth="900"
+        MaxHeight="580"
+        MaxWidth="900"
+        Title="Window1" Height="580" Width="900">
     <Grid Margin="0,0,0.4,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="155*" />
+            <ColumnDefinition Width="738*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="22*" />
@@ -17,41 +21,21 @@
             <RowDefinition Height="6*" />
         </Grid.RowDefinitions>
         <Button Content="Terug" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Height="46" Click="Button_Click" Grid.Row="2"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10.2,5,0,73" TextWrapping="Wrap" Text="Tijdens een beurt mag een speler de dobbelstenen ten hoogste drie keer werpen. Bij de eerste en tweede worp kan hij enkele dobbelstenen opzij leggen en enkel de andere opnieuw werpen. Na de derde beurt is hij verplicht om zijn combinatie onder te brengen in een van de dertien categorieën. Dit mag ook na de eerste of tweede worp. Nadat de speler een categorie ingevuld heeft, is de volgende speler aan de beurt.
-Spelregels Yahtzee
-Een speler moet elke categorie één keer invullen tijdens het spel. Dit betekent dat het kan gebeuren dat een speler nul punten scoort in een bepaalde categorie. Nadat de spelers in alle categorieën een combinatie ingevuld hebben, tellen zij hun punten op. De speler met het hoogste aantal punten is de winnaar. Er worden ook wedstrijden van vijf ronden gespeeld, waarbij de speler met het hoogste puntentotaal na vijf ronden wordt uitgeroepen tot algehele winnaar. Het spel kan ook alleen gespeeld worden. De speler kan dan een lijst met hoogste scores bijhouden.
-Er zijn twee soorten categorieën:
-Bovenste vakken: de nummercombinaties 1 t/m 6.
-Onderste vakken: pokerachtige combinaties.
-Bovenste vakken
-Bij de vakken 1 t/m 6 is het aantal punten gelijk aan het aantal keer dat een dobbelsteen het overeenkomstige aantal ogen aanwijst, vermenigvuldigd met het aantal ogen.
-
-Als een speler 63 punten of meer behaalt in de bovenste vakken (bijvoorbeeld door in al deze vakken een worp met ten minste drie keer de juiste dobbelsteen te noteren), dan krijgt hij 35 bonuspunten.
-Onderste vakken
-Drie gelijke: De score is het totaal van alle ogen, als er minstens 3 dobbelstenen met hetzelfde aantal ogen zijn.
-Vier gelijke: De score is het totaal van alle ogen, als er minstens 4 dobbelstenen met hetzelfde aantal ogen zijn.
-Kleine straat: 30 punten voor 4 oplopende dobbelstenen.
-Grote straat: 40 punten voor 5 oplopende dobbelstenen.
-Full House: 25 punten voor 3 gelijke en één paar. (5 gelijke telt niet als Full House,
-tenzij het vak Yahtzee reeds ingevuld is).
-Kans: De score is het totaal aantal ogen van alle dobbelstenen.
-Yahtzee: 50 punten als alle dobbelstenen hetzelfde aantal ogen hebben.
-
-
-Combinatie	Aantal punten
-Drie gelijke	Totaal aantal ogen
-Vier gelijke	Totaal aantal ogen
-Kleine straat	30
-Grote straat	40
-Full House	25
-Kans	Totaal aantal ogen
-Yahtzee	50
-Yahtzee-bonus
-De speler kan een Yahtzee-bonus scoren als hij meerdere keren vijf gelijke dobbelstenen heeft in hetzelfde spel. Voorwaarde is dat de eerste Yahtzee genoteerd is met 50 punten en niet 0 is. De bonus bedraagt 100 punten voor de tweede en elke volgende yahtzee. De combinatie wordt tijdens dezelfde beurt ook in een andere categorie ingevuld.
-Als het Yahtzee-vakje al is ingevuld (met 0 of 50 punten) dan geldt de combinatie ook als Full House (25 punten), Kleine straat (30 punten) of Grote straat (40 punten). Voorwaarde is dat het vakje uit de lijst 1 t/m 6 van het aantal ogen van de Yahtzee reeds is ingevuld.
-" VerticalAlignment="Center" Grid.Column="1" Grid.RowSpan="3" Height="450" Width="685"/>
-        <TextBlock HorizontalAlignment="Left" Margin="30,22,0,0" TextWrapping="Wrap" Text="Spelregels" VerticalAlignment="Top" Grid.Column="0" Height="50" Width="100"/>
-        <Image Source="Yat logo.png" Grid.Column="0" Stretch="fill" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Grid.RowSpan="3" Height="468" Width="630" Margin="37,10,31.4,29.2"><Run Text="Het dobbelspel Yahtzee is wereldwijd bekend en is ook in ons land razend populair. Het spel wordt gespeeld met vijf dobbelstenen en scoreblok, waar het ook een zeer compact spel is. Elke deelnemer mag bij elke beurt driemaal de dobbelstenen werpen. De bedoeling is om een zo'n hoog mogelijke score te bereiken, deze kan vervolgens worden opgeschreven op het scoreblokje."/><LineBreak/><Run/><LineBreak/><Run Text="De deelnemer mag bij de eerste twee worpen zijn stenen apart leggen en met de overige dobbelstenen gooien. Echter na de derde worp staat de score vast en is dat niet meer mogelijk. Er moeten steeds combinaties van het scoreblok worden gehaald. Het is natuurlijk ook een mogelijkheid dat de gewenste combinatie al bij de eerste worp tot stand zal komen. Het is niet verplicht om drie keer te gooien met de dobbelstenen."/><LineBreak/><Run FontSize="22" Text="_____________________________________________________________________"/><LineBreak/><Run Text=""/><LineBreak/><Run Text="Three of a kind: als u drie dezelfde dobbelstenen heeft. Hier wordt de waarde van de vijf dobbelstenen bij u score opgeteld. Dus bijvoorbeeld drie vijven, een twee en een vier, geven u dan 21 punten."/><LineBreak/><Run/><LineBreak/><Run Text="Carré: idem als three of akind, maar dan vier dezelfde dobbelstenen."/><LineBreak/><Run/><LineBreak/><Run Text="Full House: gooi twee dezelfde en drie dezelfde nummers, dus bv. twee enen en drie tweeën. Dit levert u 25 punten op."/><LineBreak/><Run/><LineBreak/><Run Text="Kleine Straat: als u vier opeenvolgende nummers gooit, bijvoorbeeld 2, 3, 4 en 5. Dit levert u 30 punten op"/><LineBreak/><Run/><LineBreak/><Run Text="Grote Straat: als u vijf opeenvolgende nummers gooit. Dit levert 40 punten op."/><LineBreak/><Run/><LineBreak/><Run Text="Yahtzee: als u vijf dezelfde nummers heeft gegooid. Dit levert 50 punten op."/><LineBreak/><Run/><LineBreak/><Run Text="Chance: dit is de som van alle dobbelstenen, zonder enige voorwaarde daaraan verbonden."/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <TextBlock TextWrapping="Wrap" Text="Spelregels" Grid.Column="0" Height="122" Width="329" RenderTransformOrigin="1,0.5" FontFamily="Rockwell" FontSize="60" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="-91,123,655.6,122.2" Opacity="0.5" FontWeight="Bold" HorizontalAlignment="Center">
+            <TextBlock.Effect>
+                <BlurEffect Radius="2"/>
+            </TextBlock.Effect>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform X="-164.5" Y="164.5"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Image Source="Yat logo.png" Grid.Column="0" Stretch="fill" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="70" Width="114"/>
 
     </Grid>
 </Window>
