@@ -40,3 +40,5 @@ C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step
 C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.exe
 C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.pdb
 C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.csprojAssemblyReference.cache
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Window1.g.cs
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Window1.baml
