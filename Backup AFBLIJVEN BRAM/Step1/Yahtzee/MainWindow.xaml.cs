@@ -42,8 +42,9 @@ namespace Yahtzee
         public bool alGestoptDobbelsteen4 = false;
         public bool alGestoptDobbelsteen5 = false;
         //Score van de speler
-        int score;
-        int rondeScore;
+        public int score;
+        public int rondeScore;
+        public bool yahtzeeGegooid = false; //Spel stopt wanneer er Yahtzee is gegooid
 
         private void Rollen_Click(object sender, RoutedEventArgs e)
         {
@@ -244,6 +245,7 @@ namespace Yahtzee
                 scoreTekst.Text = Convert.ToString(score);
                 rondeScoreTekst.Text = Convert.ToString(rondeScore);
                 waarschuwingen.Text = "YATHZEE!";
+                yahtzeeGegooid = true;
             }
             else
             {
@@ -324,7 +326,7 @@ namespace Yahtzee
 
         private void VolgendeBeurtKlik(object sender, RoutedEventArgs e)
         {
-            if (beurt < 5)
+            if (yahtzeeGegooid != true)
             {
                 rondeScore = 0;
                 beurt += 1;
