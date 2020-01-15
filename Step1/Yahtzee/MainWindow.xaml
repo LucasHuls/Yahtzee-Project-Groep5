@@ -49,6 +49,7 @@
         <TextBlock x:Name="dobbeltt3" Grid.Column="2" HorizontalAlignment="Left" Margin="67.4,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
         <TextBlock x:Name="dobbeltt4" Grid.Column="3" HorizontalAlignment="Left" Margin="65.4,26.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
         <TextBlock x:Name="dobbeltt5" Grid.Column="4" HorizontalAlignment="Left" Margin="66.4,26.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
+        <Button Content="Spel Opnieuw" Grid.Column="4" HorizontalAlignment="Left" Margin="113.4,0,0,0" Grid.Row="4" VerticalAlignment="Top" Width="114" Height="84" Grid.ColumnSpan="3" Click="Button_Click"/>
 
 
 
