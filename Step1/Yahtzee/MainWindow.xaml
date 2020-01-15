@@ -41,32 +41,23 @@
         <TextBlock x:Name="waarschuwingen" Text="Veel Plezier" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
         <TextBlock x:Name="scorePlaceholder" Text="Score :" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
         <TextBlock x:Name="scoreTekst" Text="0" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
-<<<<<<< HEAD
 
-        <TextBlock x:Name="dobbeltt1" HorizontalAlignment="Left" Margin="55,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3" Visibility="Hidden"/>
-=======
         <TextBlock x:Name="rondeScorePlaceholder" Text="Ronde Score :" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
         <TextBlock x:Name="rondeScoreTekst" Text="0" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25" Margin="46,0,85.8,69" Grid.RowSpan="2"/>
 
 
         <TextBlock x:Name="dobbeltt1" HorizontalAlignment="Left" Margin="55,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
->>>>>>> 0f80a7b5a4c8dd314912de3280d563cd83592664
         <TextBlock x:Name="dobbeltt2" Grid.Column="1" HorizontalAlignment="Left" Margin="42.2,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
         <TextBlock x:Name="dobbeltt3" Grid.Column="2" HorizontalAlignment="Left" Margin="67.4,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
         <TextBlock x:Name="dobbeltt4" Grid.Column="3" HorizontalAlignment="Left" Margin="65.4,26.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
         <TextBlock x:Name="dobbeltt5" Grid.Column="4" HorizontalAlignment="Left" Margin="66.4,26.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
-<<<<<<< HEAD
+
         <Image x:Name="een" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Grid.Row="3" Grid.Column="0"/>
         <Image x:Name="twee" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Grid.Row="3" Grid.Column="1"/>
         <Image x:Name="drie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Grid.Row="3" Grid.Column="2"/>
         <Image x:Name="vier" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Grid.Row="3" Grid.Column="3"/>
         <Image x:Name="vijf" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Grid.Row="3" Grid.Column="4"/>
         <Image x:Name="zes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Grid.Row="3" Grid.Column="5"/>
-=======
-        
-
-
->>>>>>> 0f80a7b5a4c8dd314912de3280d563cd83592664
 
     </Grid>
 </Window>
