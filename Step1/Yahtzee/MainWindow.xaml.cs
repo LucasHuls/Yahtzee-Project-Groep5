@@ -23,6 +23,11 @@ namespace Yahtzee
         public MainWindow()
         {
             InitializeComponent();
+            een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/kHyvj68/mark-39951-960-720.png", UriKind.RelativeOrAbsolute));
+            twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/kHyvj68/mark-39951-960-720.png", UriKind.RelativeOrAbsolute));
+            drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/kHyvj68/mark-39951-960-720.png", UriKind.RelativeOrAbsolute));
+            vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/kHyvj68/mark-39951-960-720.png", UriKind.RelativeOrAbsolute));
+            vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/kHyvj68/mark-39951-960-720.png", UriKind.RelativeOrAbsolute));
         }
         //Public variabelen
         public Random rnd = new Random();
@@ -45,7 +50,7 @@ namespace Yahtzee
         int score;
         int rondeScore;
 
-        private void Rollen_Click(object sender, RoutedEventArgs e)
+        public void Rollen_Click(object sender, RoutedEventArgs e)
         {
             RandomGetallen(); //RandomGetallen functie aanroepen
 
@@ -55,22 +60,142 @@ namespace Yahtzee
                 if (alGestoptDobbelsteen1 != true)
                 {
                     dobbeltt1.Text = Convert.ToString(dobbelsteen1);
+                    if (dobbeltt1.Text == "1")
+                    {
+                        een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/XJKR2Xd/een.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt1.Text == "2")
+                    {
+                        een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/hmPLq6m/twee.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt1.Text == "3")
+                    {
+                        een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/1rQXN5Q/drie.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt1.Text == "4")
+                    {
+                        een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/frQ4DQq/vier.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt1.Text == "5")
+                    {
+                        een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/cXJDkc0/vijf.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt1.Text == "6")
+                    {
+                        een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/DbymGG4/zes.png", UriKind.RelativeOrAbsolute));
+                    }
                 }
                 if (alGestoptDobbelsteen2 != true)
                 {
                     dobbeltt2.Text = Convert.ToString(dobbelsteen2);
+                    if (dobbeltt2.Text == "1")
+                    {
+                        twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/XJKR2Xd/een.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt2.Text == "2")
+                    {
+                        twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/hmPLq6m/twee.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt2.Text == "3")
+                    {
+                        twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/1rQXN5Q/drie.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt2.Text == "4")
+                    {
+                        twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/frQ4DQq/vier.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt2.Text == "5")
+                    {
+                        twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/cXJDkc0/vijf.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt2.Text == "6")
+                    {
+                        twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/DbymGG4/zes.png", UriKind.RelativeOrAbsolute));
+                    }
                 }
                 if (alGestoptDobbelsteen3 != true)
                 {
                     dobbeltt3.Text = Convert.ToString(dobbelsteen3);
+                    if (dobbeltt3.Text == "1")
+                    {
+                        drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/XJKR2Xd/een.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt3.Text == "2")
+                    {
+                        drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/hmPLq6m/twee.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt3.Text == "3")
+                    {
+                        drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/1rQXN5Q/drie.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt3.Text == "4")
+                    {
+                        drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/frQ4DQq/vier.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt3.Text == "5")
+                    {
+                        drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/cXJDkc0/vijf.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt3.Text == "6")
+                    {
+                        drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/DbymGG4/zes.png", UriKind.RelativeOrAbsolute));
+                    }
                 }
                 if (alGestoptDobbelsteen4 != true)
                 {
                     dobbeltt4.Text = Convert.ToString(dobbelsteen4);
+                    if (dobbeltt4.Text == "1")
+                    {
+                        vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/XJKR2Xd/een.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt4.Text == "2")
+                    {
+                        vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/hmPLq6m/twee.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt4.Text == "3")
+                    {
+                        vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/1rQXN5Q/drie.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt4.Text == "4")
+                    {
+                        vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/frQ4DQq/vier.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt4.Text == "5")
+                    {
+                        vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/cXJDkc0/vijf.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt4.Text == "6")
+                    {
+                        vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/DbymGG4/zes.png", UriKind.RelativeOrAbsolute));
+                    }
                 }
                 if (alGestoptDobbelsteen5 != true)
                 {
                     dobbeltt5.Text = Convert.ToString(dobbelsteen5);
+                    if (dobbeltt5.Text == "1")
+                    {
+                        vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/XJKR2Xd/een.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt5.Text == "2")
+                    {
+                        vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/hmPLq6m/twee.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt5.Text == "3")
+                    {
+                        vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/1rQXN5Q/drie.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt5.Text == "4")
+                    {
+                        vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/frQ4DQq/vier.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt5.Text == "5")
+                    {
+                        vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/cXJDkc0/vijf.png", UriKind.RelativeOrAbsolute));
+                    }
+                    if (dobbeltt5.Text == "6")
+                    {
+                        vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/DbymGG4/zes.png", UriKind.RelativeOrAbsolute));
+                    }
                 }
                 aantalGooien +=1;
                 AllesGestopt();
@@ -82,7 +207,11 @@ namespace Yahtzee
         }
         private void RandomGetallen()
         {
+<<<<<<< HEAD
+            if (alRandom < 3) //Zorgt ervoor dat de dobbelstenen maximaal 3 keer een random getal krijgen
+=======
             if(aantalGooien < 3) //Zorgt ervoor dat de dobbelstenen maximaal 3 keer een random getal krijgen
+>>>>>>> 0f80a7b5a4c8dd314912de3280d563cd83592664
             {
                 //Random getal kiezen voor elke dobbelsteen
                 dobbelsteen1 = rnd.Next(1, 7);
