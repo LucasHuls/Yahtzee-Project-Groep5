@@ -378,5 +378,11 @@ namespace Yahtzee
             Window1 sw = new Window1();
             sw.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            Application.Current.Shutdown();
+        }
     }
 }

@@ -26,15 +26,15 @@
         </Grid.RowDefinitions>
 
         <!--Knoppen-->
-        <Button x:Name="spelregels" Grid.Column="6" Grid.Row="0" Content="Spelregels" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="spelregels_Click"/>
         <Button x:Name="volgendeBeurt" Grid.Column="6" Opacity="0" Grid.Row="6" IsEnabled="False" Content="Volgende Beurt" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="VolgendeBeurtKlik"/>
-
+        <Button x:Name="spelregels" Grid.Column="6" Grid.Row="0" Content="Spelregels" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="spelregels_Click"/>
         <Button x:Name="rollen" Grid.Column="5" Grid.Row="0" Content="Rol Dobbelsteen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Rollen_Click"/>
         <Button x:Name="dobbelVast1Knop" Content="Stop" Grid.Column="0" Grid.Row="4" Click="DobbelVast1Klik"/>
         <Button x:Name="dobbelVast2Knop" Content="Stop" Grid.Column="1" Grid.Row="4" Click="DobbelVast2Klik"/>
         <Button x:Name="dobbelVast3Knop" Content="Stop" Grid.Column="2" Grid.Row="4" Click="DobbelVast3Klik"/>
         <Button x:Name="dobbelVast4Knop" Content="Stop" Grid.Column="3" Grid.Row="4" Click="DobbelVast4Klik"/>
         <Button x:Name="dobbelVast5Knop" Content="Stop" Grid.Column="4" Grid.Row="4" Click="DobbelVast5Klik"/>
+        <Button Content="Speel Opnieuw" Grid.Column="6" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" Click="Button_Click"/>
 
         <!--Teksten-->
         <TextBlock x:Name="logo" Text="Yahtyeet" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="50"/>
@@ -50,6 +50,7 @@
         <TextBlock x:Name="dobbeltt3" Grid.Column="2" HorizontalAlignment="Left" Margin="67.4,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
         <TextBlock x:Name="dobbeltt4" Grid.Column="3" HorizontalAlignment="Left" Margin="65.4,26.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
         <TextBlock x:Name="dobbeltt5" Grid.Column="4" HorizontalAlignment="Left" Margin="66.4,26.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
+        
 
 
 
