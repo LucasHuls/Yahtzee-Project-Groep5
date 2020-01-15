@@ -208,11 +208,7 @@ namespace Yahtzee
         }
         private void RandomGetallen()
         {
-<<<<<<< HEAD
-            if (alRandom < 3) //Zorgt ervoor dat de dobbelstenen maximaal 3 keer een random getal krijgen
-=======
             if(aantalGooien < 3) //Zorgt ervoor dat de dobbelstenen maximaal 3 keer een random getal krijgen
->>>>>>> 0f80a7b5a4c8dd314912de3280d563cd83592664
             {
                 //Random getal kiezen voor elke dobbelsteen
                 dobbelsteen1 = rnd.Next(1, 7);
