@@ -26,9 +26,14 @@
         </Grid.RowDefinitions>
 
         <!--Knoppen-->
+<<<<<<< HEAD
         <Button x:Name="spelregels" Grid.Column="6" Grid.Row="0" Content="Spelregels" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="spelregels_Click"/>
         <Button x:Name="volgendeBeurt" Grid.Column="6" Opacity="0" Grid.Row="6" IsEnabled="False" Content="Volgende Beurt" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="VolgendeBeurtKlik"/>
 
+=======
+        <Button x:Name="volgendeBeurt" Grid.Column="6" Opacity="0" Grid.Row="6" IsEnabled="False" Content="Volgende Beurt" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="VolgendeBeurtKlik"/>
+        <Button x:Name="spelregels" Grid.Column="6" Grid.Row="0" Content="Spelregels" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="spelregels_Click"/>
+>>>>>>> 169a555b1ee932053da9eedc7847f25e3314a18f
         <Button x:Name="rollen" Grid.Column="5" Grid.Row="0" Content="Rol Dobbelsteen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Rollen_Click"/>
         <Button x:Name="dobbelVast1Knop" Content="Stop" Grid.Column="0" Grid.Row="4" Click="DobbelVast1Klik"/>
         <Button x:Name="dobbelVast2Knop" Content="Stop" Grid.Column="1" Grid.Row="4" Click="DobbelVast2Klik"/>
@@ -50,6 +55,7 @@
         <TextBlock x:Name="dobbeltt3" Grid.Column="2" HorizontalAlignment="Left" Margin="67.4,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
         <TextBlock x:Name="dobbeltt4" Grid.Column="3" HorizontalAlignment="Left" Margin="65.4,26.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
         <TextBlock x:Name="dobbeltt5" Grid.Column="4" HorizontalAlignment="Left" Margin="66.4,26.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
+        <Button Content="Spel Opnieuw" Grid.Column="4" HorizontalAlignment="Left" Margin="113.4,0,0,0" Grid.Row="4" VerticalAlignment="Top" Width="114" Height="84" Grid.ColumnSpan="3" Click="Button_Click"/>
 
 
 
