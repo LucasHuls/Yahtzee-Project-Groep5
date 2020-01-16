@@ -1,0 +1,65 @@
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.exe.config
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.exe
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.pdb
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\MainWindow.g.cs
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\App.g.cs
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.cache
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.lref
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\MainWindow.baml
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.g.resources
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.Properties.Resources.resources
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.csproj.GenerateResource.cache
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.exe
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.pdb
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.exe.config
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.exe
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.pdb
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.csprojAssemblyReference.cache
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\MainWindow.g.cs
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\App.g.cs
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.cache
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.lref
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\MainWindow.baml
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.g.resources
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.Properties.Resources.resources
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.csproj.GenerateResource.cache
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.exe
+D:\Projects\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.pdb
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.exe.config
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.exe
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.pdb
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.csprojAssemblyReference.cache
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\MainWindow.g.cs
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\App.g.cs
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.cache
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.lref
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\MainWindow.baml
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.g.resources
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.Properties.Resources.resources
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.csproj.GenerateResource.cache
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.exe
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.pdb
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.csprojAssemblyReference.cache
+<<<<<<< HEAD
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Window1.g.cs
+C:\Users\elfri\Documents\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Window1.baml
+=======
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Window1.g.cs
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Window1.baml
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.exe.config
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.exe
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\bin\Debug\Yahtzee.pdb
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.csprojAssemblyReference.cache
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\MainWindow.g.cs
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Window1.g.cs
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\App.g.cs
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.cache
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.lref
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\MainWindow.baml
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Window1.baml
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.g.resources
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.Properties.Resources.resources
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.csproj.GenerateResource.cache
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.exe
+C:\Users\jaspe\Documents\Yahtzee Groep 5\Yahtzee-Project-Groep5\Step1\Yahtzee\obj\Debug\Yahtzee.pdb
+>>>>>>> 169a555b1ee932053da9eedc7847f25e3314a18f
