@@ -50,6 +50,7 @@ namespace Yahtzee
         public int score;
         public int rondeScore;
         public bool yahtzeeGegooid = false; //Spel stopt wanneer er Yahtzee is gegooid
+        public bool stopKnoppen = false;
         //Wat heeft de speler gegooid
         public int gegooideDrieGelijke = 0;
         public int gegooideVierGelijke = 0;
@@ -63,6 +64,8 @@ namespace Yahtzee
         public void Rollen_Click(object sender, RoutedEventArgs e)
         {
             RandomGetallen(); //RandomGetallen functie aanroepen
+
+            StopKnoppen();
 
             if (aantalGooien < 3) //Zorgt ervoor dat er niet vaker dan 3 keer kan worden gegooid
             {
@@ -338,12 +341,8 @@ namespace Yahtzee
             int totaalScore = dobbelsteen1 + dobbelsteen2 + dobbelsteen3 + dobbelsteen4 + dobbelsteen5;
             bool drieGelijke = false;
             bool vierGelijke = false;
-<<<<<<< HEAD
-            bool fullHouse = false;
-
-=======
             bool Fullhouse = false;
->>>>>>> ea1b13432fb132336fcbc3037d0513266cca550f
+
             /*Drie gelijke: De score is het totaal van alle ogen, als er minstens 3 dobbelstenen met hetzelfde aantal ogen zijn.
               Vier gelijke: De score is het totaal van alle ogen, als er minstens 4 dobbelstenen met hetzelfde aantal ogen zijn.
               Kleine straat: 30 punten voor 4 opeenvolgende ogenaantallen.
@@ -390,6 +389,7 @@ namespace Yahtzee
                 scoreTekst.Text = Convert.ToString(score);
                 rondeScoreTekst.Text = Convert.ToString(rondeScore);
                 waarschuwingen.Text = "YATHZEE!";
+                gegooideYahtzee++;
                 yahtzeeGegooid = true;
             }
             else
@@ -432,22 +432,18 @@ namespace Yahtzee
                         }
                     }
                 }
-<<<<<<< HEAD
-                
-                if (drieGelijke == true)
-=======
                 //FULLHOUSE
                 if (FullHouseDubbelVerwijderen == null || FullHouseDubbelVerwijderen.Length == 2)
                 {
                     score += 25;
                     rondeScore += 25;
-                    waarschuwingen.Text = "FullHouse!";
+                    waarschuwingen.Text = "Full House";
                     scoreTekst.Text = Convert.ToString(score);
                     rondeScoreTekst.Text = Convert.ToString(rondeScore);
+                    gegooideFullHouse++;
                     Fullhouse = true;
                 }
                 if (drieGelijke == true && Fullhouse == false)
->>>>>>> ea1b13432fb132336fcbc3037d0513266cca550f
                 {
                     int optel = dobbelstenen[0] + dobbelstenen[1] + dobbelstenen[2] + dobbelstenen[3] + dobbelstenen[4];
                     score += optel;
@@ -487,7 +483,19 @@ namespace Yahtzee
 
             SpelAfgelopen();
         }
+        private void StopKnoppen()
+        {
+            if (stopKnoppen != true)
+            {
+                dobbelVast1Knop.Opacity = 1; dobbelVast1Knop.IsEnabled = true;
+                dobbelVast2Knop.Opacity = 1; dobbelVast2Knop.IsEnabled = true;
+                dobbelVast3Knop.Opacity = 1; dobbelVast3Knop.IsEnabled = true;
+                dobbelVast4Knop.Opacity = 1; dobbelVast4Knop.IsEnabled = true;
+                dobbelVast5Knop.Opacity = 1; dobbelVast5Knop.IsEnabled = true;
 
+                stopKnoppen = true;
+            }
+        }
         private void VolgendeBeurtKlik(object sender, RoutedEventArgs e)
         {
             if (yahtzeeGegooid != true)
@@ -502,16 +510,7 @@ namespace Yahtzee
                 dobbeltt4.IsEnabled = true;
                 dobbeltt5.IsEnabled = true;
 
-                dobbelVast1Knop.Opacity = 1;
-                dobbelVast2Knop.Opacity = 1;
-                dobbelVast3Knop.Opacity = 1;
-                dobbelVast4Knop.Opacity = 1;
-                dobbelVast5Knop.Opacity = 1;
-                dobbelVast1Knop.IsEnabled = true;
-                dobbelVast2Knop.IsEnabled = true;
-                dobbelVast3Knop.IsEnabled = true;
-                dobbelVast4Knop.IsEnabled = true;
-                dobbelVast5Knop.IsEnabled = true;
+                stopKnoppen = false;
 
                 alGestoptDobbelsteen1 = false;
                 alGestoptDobbelsteen2 = false;
@@ -550,8 +549,9 @@ namespace Yahtzee
 
                 waarschuwingen.Text = "Spel Afgelopen";
                 gegooidPlaceholder.Opacity = 1;
-                drieGelijkeTekst.Opacity = 1; vierGelijkeTekst.Opacity = 1; fullHouseTekst.Opacity = 1; kleineStraatTekst.Opacity = 1; groteStraatTekst.Opacity = 1; yahtzeeTekst.Opacity = 1;
+                kansTekst.Opacity = 1; drieGelijkeTekst.Opacity = 1; vierGelijkeTekst.Opacity = 1; fullHouseTekst.Opacity = 1; kleineStraatTekst.Opacity = 1; groteStraatTekst.Opacity = 1; yahtzeeTekst.Opacity = 1;
 
+                kansTekst.Text = "Kans  : " + gegooideKans; 
                 drieGelijkeTekst.Text = "Drie Gelijke   : " + gegooideDrieGelijke;
                 vierGelijkeTekst.Text = "Vier Gelijke   : " + gegooideVierGelijke;
                 fullHouseTekst.Text = "Full House     : " + gegooideFullHouse;
