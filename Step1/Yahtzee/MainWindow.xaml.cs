@@ -549,7 +549,7 @@ namespace Yahtzee
 
                 waarschuwingen.Text = "Spel Afgelopen";
                 gegooidPlaceholder.Opacity = 1;
-                kansTekst.Opacity = 1; drieGelijkeTekst.Opacity = 1; vierGelijkeTekst.Opacity = 1; fullHouseTekst.Opacity = 1; kleineStraatTekst.Opacity = 1; groteStraatTekst.Opacity = 1; yahtzeeTekst.Opacity = 1;
+                kansTekst.Opacity = 1; drieGelijkeTekst.Opacity = 1; vierGelijkeTekst.Opacity = 1; fullHouseTekst.Opacity = 1; kleineStraatTekst.Opacity = 1; groteStraatTekst.Opacity = 1; yahtzeeTekst.Opacity = 1; gemiddeldTekst.Opacity = 1;
 
                 kansTekst.Text = "Kans  : " + gegooideKans; 
                 drieGelijkeTekst.Text = "Drie Gelijke   : " + gegooideDrieGelijke;
@@ -558,6 +558,7 @@ namespace Yahtzee
                 kleineStraatTekst.Text = "Kleine Straat  : " + gegooideKleineStraat;
                 groteStraatTekst.Text = "Grote Straat  : " + gegooideGroteStraat;
                 yahtzeeTekst.Text = "Yahtzee    : " + gegooideYahtzee;
+                gemiddeldTekst.Text = "Gemiddelde punten : " + score / beurt;
             }
         }
 
