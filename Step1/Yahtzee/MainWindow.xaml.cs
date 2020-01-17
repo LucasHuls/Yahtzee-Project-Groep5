@@ -352,8 +352,8 @@ namespace Yahtzee
               Yahtzee: 50 punten als alle dobbelstenen hetzelfde aantal ogen hebben.*/
 
             //Check voor FullHouse
-            int[] FullhouseCheck = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 };
-            int[] FullHouseDubbelVerwijderen = FullhouseCheck.Distinct().ToArray();
+            int[] FullhouseCheck = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 }; //Een extra array voor het checken van alle getallen
+            int[] FullHouseDubbelVerwijderen = FullhouseCheck.Distinct().ToArray(); //Verwijderen van duplicaten in de array waaronder de uitkomst 2 moet zijn voor fullhouse
 
             //Kleine Straat
             if (Array.Exists(dobbelstenen, element => element == 1) && Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4)
@@ -433,7 +433,7 @@ namespace Yahtzee
                     }
                 }
                 //FULLHOUSE
-                if (FullHouseDubbelVerwijderen == null || FullHouseDubbelVerwijderen.Length == 2)
+                if (FullHouseDubbelVerwijderen == null || FullHouseDubbelVerwijderen.Length == 2) //Als uitkomst op lijn 356 2 is, activeer fullhouse
                 {
                     score += 25;
                     rondeScore += 25;
@@ -551,7 +551,7 @@ namespace Yahtzee
                 gegooidPlaceholder.Opacity = 1;
                 kansTekst.Opacity = 1; drieGelijkeTekst.Opacity = 1; vierGelijkeTekst.Opacity = 1; fullHouseTekst.Opacity = 1; kleineStraatTekst.Opacity = 1; groteStraatTekst.Opacity = 1; yahtzeeTekst.Opacity = 1; gemiddeldTekst.Opacity = 1;
 
-                kansTekst.Text = "Kans  : " + gegooideKans; 
+                kansTekst.Text = "Kans  : " + gegooideKans;
                 drieGelijkeTekst.Text = "Drie Gelijke   : " + gegooideDrieGelijke;
                 vierGelijkeTekst.Text = "Vier Gelijke   : " + gegooideVierGelijke;
                 fullHouseTekst.Text = "Full House     : " + gegooideFullHouse;
