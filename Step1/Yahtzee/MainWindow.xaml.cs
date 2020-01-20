@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -61,6 +62,9 @@ namespace Yahtzee
             RandomGetallen(); //RandomGetallen functie aanroepen
 
             StopKnoppen();
+            SoundPlayer sd = new SoundPlayer();
+            sd.SoundLocation = Server.MapPath("~/sounds/File.wav");
+            sd.Play();
 
             if (aantalGooien < 3) //Zorgt ervoor dat er niet vaker dan 3 keer kan worden gegooid
             {
