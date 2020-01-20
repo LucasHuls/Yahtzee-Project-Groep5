@@ -477,8 +477,32 @@ namespace Yahtzee
                 gegooideKans++;
             }
 
+            //Viergelijke
             volgendeBeurt.Opacity = 1;
             volgendeBeurt.IsEnabled = true;
+
+            if (gegooideVierGelijke > 1)
+            {
+                Selecteer3.Opacity = 1;
+            }
+
+            //Driegelijke
+            volgendeBeurt.Opacity = 1;
+            volgendeBeurt.IsEnabled = true;
+
+            if (gegooideDrieGelijke > 1)
+            {
+                Selecteer2.Opacity = 1;
+            }
+
+            //Fullhouse
+            volgendeBeurt.Opacity = 1;
+            volgendeBeurt.IsEnabled = true;
+
+            if (gegooideFullHouse > 1)
+            {
+                Selecteer1.Opacity = 1;
+            }
 
             SpelAfgelopen();
         }
@@ -563,6 +587,12 @@ namespace Yahtzee
         {
             Application.Current.Shutdown();
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+        }
+
+       
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
