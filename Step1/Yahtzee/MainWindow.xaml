@@ -52,7 +52,9 @@
         <TextBlock x:Name="kansTekst"  Text="Kans: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Bottom" FontSize="20"/>
         <TextBlock x:Name="drieGelijkeTekst"  Text="Driegelijke: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Top" FontSize="20"/>
         <TextBlock x:Name="vierGelijkeTekst"  Text="Viergelijke: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Center" FontSize="20"/>
-        <TextBlock x:Name="fullHouseTekst"  Text="Full House: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Bottom" FontSize="20"/>
+        <TextBlock x:Name="fullHouseTekst" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Bottom" FontSize="20"><Run Text="Full House: "/><InlineUIContainer>
+                <Button x:Name="Button_click" Content="Selecteer" Width="93" Height="19" Opacity="0"  RenderTransformOrigin="0.518,0.189" FontSize="11"/>
+            </InlineUIContainer></TextBlock>
         <TextBlock x:Name="kleineStraatTekst"  Text="Kleine Straat: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
         <TextBlock x:Name="groteStraatTekst"  Text="Grote Straat" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Center" FontSize="20"/>
         <TextBlock x:Name="yahtzeeTekst"  Text="Yahtzee: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" FontSize="20"/>
@@ -71,6 +73,9 @@
         <Image x:Name="vier" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Grid.Row="3" Grid.Column="3"/>
         <Image x:Name="vijf" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Grid.Row="3" Grid.Column="4"/>
         <Image x:Name="zes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Grid.Row="3" Grid.Column="5"/>
+        <Button x:Name="Selecteer1" Grid.Column="9" Opacity="0" HorizontalAlignment="Left" Margin="3.4,60,0,0" VerticalAlignment="Top" Width="94" FontWeight="Bold" Height="17" Content="Selecteer"/>
+        <Button x:Name="Selecteer2" Grid.Column="9" Opacity="0" HorizontalAlignment="Left" Margin="4.4,3,0,0" VerticalAlignment="Top" Width="92" FontWeight="Bold" Height="17" Content="Selecteer"/>
+        <Button x:Name="Selecteer3" Grid.Column="9" Opacity="0" HorizontalAlignment="Left" Margin="4.4,34,0,0" VerticalAlignment="Top" Width="92" Height="17" FontWeight="Bold"/>
 
     </Grid>
 </Window>
