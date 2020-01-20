@@ -218,11 +218,11 @@ namespace Yahtzee
             if (aantalGooien < 3) //Zorgt ervoor dat de dobbelstenen maximaal 3 keer een random getal krijgen
             {
                 //Random getal kiezen voor elke dobbelsteen
-                dobbelsteen1 = rnd.Next(1, 7);
-                dobbelsteen2 = rnd.Next(1, 7);
-                dobbelsteen3 = rnd.Next(1, 7);
-                dobbelsteen4 = rnd.Next(1, 7);
-                dobbelsteen5 = rnd.Next(1, 7);
+                dobbelsteen1 = rnd.Next(1, 2);
+                dobbelsteen2 = rnd.Next(1, 2);
+                dobbelsteen3 = rnd.Next(1, 2);
+                dobbelsteen4 = rnd.Next(2, 3);
+                dobbelsteen5 = rnd.Next(2, 3);
             }
         }
         private void DobbelVast1Klik(object sender, RoutedEventArgs e)
@@ -296,11 +296,7 @@ namespace Yahtzee
             else if (aantalGooien == 3)
             {
                 //Dobbelstenen stoppen
-                dobbelsteen1 = 0;
-                dobbelsteen2 = 0;
-                dobbelsteen3 = 0;
-                dobbelsteen4 = 0;
-                dobbelsteen5 = 0;
+                
 
                 dobbeltt1.IsEnabled = false;
                 dobbeltt2.IsEnabled = false;
@@ -336,7 +332,10 @@ namespace Yahtzee
             int totaalScore = dobbelsteen1 + dobbelsteen2 + dobbelsteen3 + dobbelsteen4 + dobbelsteen5;
             bool drieGelijke = false;
             bool vierGelijke = false;
-            bool Fullhouse = false;
+            bool FullHouse = dobbelstenen
+                                .GroupBy(g => g)
+                                .Where(g => (g.Count() == 2) || (g.Count() == 3))
+                                .Count() == 2;
 
             /*Drie gelijke: De score is het totaal van alle ogen, als er minstens 3 dobbelstenen met hetzelfde aantal ogen zijn.
               Vier gelijke: De score is het totaal van alle ogen, als er minstens 4 dobbelstenen met hetzelfde aantal ogen zijn.
@@ -345,10 +344,6 @@ namespace Yahtzee
               Full House: 25 punten voor 3 gelijke en één paar.
               Kans: De score is het totaal aantal ogen van alle dobbelstenen.
               Yahtzee: 50 punten als alle dobbelstenen hetzelfde aantal ogen hebben.*/
-
-            //Check voor FullHouse
-            int[] FullhouseCheck = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 }; //Een extra array voor het checken van alle getallen
-            int[] FullHouseDubbelVerwijderen = FullhouseCheck.Distinct().ToArray(); //Verwijderen van duplicaten in de array waaronder de uitkomst 2 moet zijn voor fullhouse
 
             //Kleine Straat
             if (Array.Exists(dobbelstenen, element => element == 1) && Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4)
@@ -384,69 +379,94 @@ namespace Yahtzee
                 scoreTekst.Text = Convert.ToString(score);
                 rondeScoreTekst.Text = Convert.ToString(rondeScore);
                 waarschuwingen.Text = "YATHZEE!";
+
                 gegooideYahtzee++;
+                yahtzeeTekst.Text += rondeScore;
                 yahtzeeGegooid = true;
             }
             else
             {
+                
+
                 //Drie Gelijke
-                for (int i = 0; i <= 6; i++)
+                if (Fullhouse != true)
                 {
-                    int tellen = 0;
-                    for (int j = 0; j < 5; j++)
+                    for (int i = 0; i <= 6; i++)
                     {
-                        if (dobbelstenen[j] == i)
+                        int tellen = 0;
+                        for (int j = 0; j < 5; j++)
                         {
-                            tellen++;
-                            getal = dobbelstenen[j];
-                        }
-                        if (tellen == 3)
-                        {
-                            drieGelijke = true;
+                            if (dobbelstenen[j] == i)
+                            {
+                                tellen++;
+                                getal = dobbelstenen[j];
+                            }
+                            if (tellen == 3)
+                            {
+                                drieGelijke = true;
+                            }
                         }
                     }
+
+                    if (drieGelijke == true)
+                    {
+                        //Vier gelijke
+                        for (int k = 0; k <= 6; k++)
+                        {
+                            int tellen2 = 0;
+                            for (int f = 0; f < 5; f++)
+                            {
+                                if (dobbelstenen[f] == k)
+                                {
+                                    tellen2++;
+                                }
+                                if (tellen2 == 4)
+                                {
+                                    drieGelijke = false;
+                                    vierGelijke = true;
+                                }
+                            }
+                        }
+                    }
+                }
+                //Full House
+                if (FullHouse == true)
+                {
+                    if (gegooideFullHouse > 1)
+                    {
+                        score += 25;
+                        rondeScore += 25;
+                        waarschuwingen.Text = "Full House";
+                        scoreTekst.Text = Convert.ToString(score);
+                        rondeScoreTekst.Text = Convert.ToString(rondeScore);
+
+                        gegooideFullHouse++;
+                        fullHouseTekst.Text += rondeScore;
+                    }
+                }
+                else
+                {
+                    waarschuwingen.Text = "Je hebt al Full House gegooid";
                 }
 
                 if (drieGelijke == true)
                 {
-                    //Vier gelijke
-                    for (int k = 0; k <= 6; k++)
+                    if (gegooideDrieGelijke != 1)
                     {
-                        int tellen2 = 0;
-                        for (int f = 0; f < 5; f++)
-                        {
-                            if (dobbelstenen[f] == k)
-                            {
-                                tellen2++;
-                            }
-                            if (tellen2 == 4)
-                            {
-                                drieGelijke = false;
-                                vierGelijke = true;
-                            }
-                        }
+                        int optel = dobbelstenen[0] + dobbelstenen[1] + dobbelstenen[2] + dobbelstenen[3] + dobbelstenen[4];
+                        score += optel;
+                        rondeScore += optel;
+                        waarschuwingen.Text = "Drie Gelijke";
+                        scoreTekst.Text = Convert.ToString(score);
+                        rondeScoreTekst.Text = Convert.ToString(rondeScore);
+
+                        gegooideDrieGelijke++;
+                        drieGelijkeTekst.Text += rondeScore;
                     }
-                }
-                //FULLHOUSE
-                if (FullHouseDubbelVerwijderen == null || FullHouseDubbelVerwijderen.Length == 2) //Als uitkomst op lijn 356 2 is, activeer fullhouse
-                {
-                    score += 25;
-                    rondeScore += 25;
-                    waarschuwingen.Text = "Full House";
-                    scoreTekst.Text = Convert.ToString(score);
-                    rondeScoreTekst.Text = Convert.ToString(rondeScore);
-                    gegooideFullHouse++;
-                    Fullhouse = true;
-                }
-                if (drieGelijke == true && Fullhouse == false)
-                {
-                    int optel = dobbelstenen[0] + dobbelstenen[1] + dobbelstenen[2] + dobbelstenen[3] + dobbelstenen[4];
-                    score += optel;
-                    rondeScore += optel;
-                    waarschuwingen.Text = "Drie Gelijke";
-                    scoreTekst.Text = Convert.ToString(score);
-                    rondeScoreTekst.Text = Convert.ToString(rondeScore);
-                    gegooideDrieGelijke++;
+                    else
+                    {
+                        waarschuwingen.Text = "Je hebt al Drie Gelijke gegooid";
+                    }
                 }
                 if (vierGelijke == true)
                 {
@@ -456,7 +476,9 @@ namespace Yahtzee
                     waarschuwingen.Text = "Vier Gelijke";
                     scoreTekst.Text = Convert.ToString(score);
                     rondeScoreTekst.Text = Convert.ToString(rondeScore);
+
                     gegooideVierGelijke++;
+                    vierGelijkeTekst.Text += rondeScore;
                 }
             }
 
@@ -467,10 +489,12 @@ namespace Yahtzee
                 score += optel;
                 rondeScore += optel;
 
-                scoreTekst.Text = Convert.ToString(score);
-                rondeScoreTekst.Text = Convert.ToString(rondeScore);
-                waarschuwingen.Text = "Kans";
-                gegooideKans++;
+                scoreTekst.Text = Convert.ToString(score); //Score Tekst bijwerken
+                rondeScoreTekst.Text = Convert.ToString(rondeScore); //Ronde Score Tekst bijwerken
+                waarschuwingen.Text = "Kans"; //Waarschuwingen Tekst naar "Kans" zetten
+
+                gegooideKans++; //1 bij gegooideKans erbij
+                kansTekst.Text += rondeScore;
             }
 
             volgendeBeurt.Opacity = 1;
@@ -520,6 +544,12 @@ namespace Yahtzee
                 dobbeltt3.Text = "0";
                 dobbeltt4.Text = "0";
                 dobbeltt5.Text = "0";
+
+                dobbelsteen1 = 0;
+                dobbelsteen2 = 0;
+                dobbelsteen3 = 0;
+                dobbelsteen4 = 0;
+                dobbelsteen5 = 0;
 
                 rollen.IsEnabled = true;
                 rollen.Opacity = 1;
