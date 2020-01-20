@@ -23,11 +23,6 @@ namespace Yahtzee
         public MainWindow()
         {
             InitializeComponent();
-            een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/kHyvj68/mark-39951-960-720.png", UriKind.RelativeOrAbsolute));
-            twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/kHyvj68/mark-39951-960-720.png", UriKind.RelativeOrAbsolute));
-            drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/kHyvj68/mark-39951-960-720.png", UriKind.RelativeOrAbsolute));
-            vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/kHyvj68/mark-39951-960-720.png", UriKind.RelativeOrAbsolute));
-            vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/kHyvj68/mark-39951-960-720.png", UriKind.RelativeOrAbsolute));
         }
         //Public variabelen
         public Random rnd = new Random();
@@ -548,17 +543,15 @@ namespace Yahtzee
                 volgendeBeurt.Opacity = 0;
 
                 waarschuwingen.Text = "Spel Afgelopen";
-                gegooidPlaceholder.Opacity = 1;
-                kansTekst.Opacity = 1; drieGelijkeTekst.Opacity = 1; vierGelijkeTekst.Opacity = 1; fullHouseTekst.Opacity = 1; kleineStraatTekst.Opacity = 1; groteStraatTekst.Opacity = 1; yahtzeeTekst.Opacity = 1; gemiddeldTekst.Opacity = 1;
 
-                kansTekst.Text = "Kans  : " + gegooideKans;
-                drieGelijkeTekst.Text = "Drie Gelijke   : " + gegooideDrieGelijke;
-                vierGelijkeTekst.Text = "Vier Gelijke   : " + gegooideVierGelijke;
-                fullHouseTekst.Text = "Full House     : " + gegooideFullHouse;
-                kleineStraatTekst.Text = "Kleine Straat  : " + gegooideKleineStraat;
-                groteStraatTekst.Text = "Grote Straat  : " + gegooideGroteStraat;
-                yahtzeeTekst.Text = "Yahtzee    : " + gegooideYahtzee;
-                gemiddeldTekst.Text = "Gemiddelde punten : " + score / beurt;
+                /*kansTekst.Text += gegooideKans;
+                drieGelijkeTekst.Text += gegooideDrieGelijke;
+                vierGelijkeTekst.Text += gegooideVierGelijke;
+                fullHouseTekst.Text += gegooideFullHouse;
+                kleineStraatTekst.Text += gegooideKleineStraat;
+                groteStraatTekst.Text += gegooideGroteStraat;
+                yahtzeeTekst.Text += gegooideYahtzee;
+                gemiddeldTekst.Text += score / beurt;*/
             }
         }
 
