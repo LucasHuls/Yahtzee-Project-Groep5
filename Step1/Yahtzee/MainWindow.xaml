@@ -40,6 +40,8 @@
         <Button x:Name="dobbelVast5Knop" Opacity="0" IsEnabled="False" Content="Vasthouden" Grid.Column="4" Grid.Row="4" Click="DobbelVast5Klik"/>
         <Button Content="Speel Opnieuw" Grid.Column="6" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" Click="NieuwSpel"/>
 
+        <Button x:Name="Button_click" Content="Selecteer" Width="93" Height="19" Opacity="0"  RenderTransformOrigin="0.518,0.189" FontSize="11"/>
+
         <!--Teksten-->
         <TextBlock x:Name="logo" Text="Yahtyeet" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="50"/>
         <TextBlock x:Name="waarschuwingen" Text="Veel Plezier" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
@@ -49,39 +51,21 @@
         <TextBlock x:Name="rondeScorePlaceholder" Text="Ronde Score :" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" FontSize="25"/>
         <TextBlock x:Name="rondeScoreTekst" Text="0" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="25"/>
 
-<<<<<<< HEAD
-        <TextBlock x:Name="kansTekst"  Text="Kans: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Bottom" FontSize="20"/>
-        <TextBlock x:Name="drieGelijkeTekst"  Text="Driegelijke: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBlock x:Name="vierGelijkeTekst"  Text="Viergelijke: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Center" FontSize="20"/>
-        <TextBlock x:Name="fullHouseTekst" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Bottom" FontSize="20"><Run Text="Full House: "/><InlineUIContainer>
-                <Button x:Name="Button_click" Content="Selecteer" Width="93" Height="19" Opacity="0"  RenderTransformOrigin="0.518,0.189" FontSize="11"/>
-            </InlineUIContainer></TextBlock>
-        <TextBlock x:Name="kleineStraatTekst"  Text="Kleine Straat: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
-        <TextBlock x:Name="groteStraatTekst"  Text="Grote Straat" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Center" FontSize="20"/>
-        <TextBlock x:Name="yahtzeeTekst"  Text="Yahtzee: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" FontSize="20"/>
-=======
-        <TextBlock x:Name="kansTekst"  Text="Kans: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="4" VerticalAlignment="Bottom" FontSize="20"/>
-        <TextBlock x:Name="drieGelijkeTekst"  Text="Driegelijke: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Top" FontSize="20"/>
-        <TextBlock x:Name="vierGelijkeTekst"  Text="Viergelijke: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Center" FontSize="20"/>
-        <TextBlock x:Name="fullHouseTekst"  Text="Full House: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Bottom" FontSize="20"/>
-        <TextBlock x:Name="kleineStraatTekst"  Text="Kleine Straat: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="4" VerticalAlignment="Top" FontSize="20"/>
-        <TextBlock x:Name="groteStraatTekst"  Text="Grote Straat" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="4" VerticalAlignment="Center" FontSize="20"/>
-        <TextBlock x:Name="yahtzeeTekst"  Text="Yahtzee: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="5" VerticalAlignment="Center" FontSize="20"/>
->>>>>>> 2bdb4ebf1f21b302cd46b58bdaef7eec97fa13b7
-        <TextBlock x:Name="gemiddeldTekst"  Text="Gemiddeld" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="20"/>
+        <TextBlock x:Name="kansTekst"  Text="Kans: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock x:Name="drieGelijkeTekst"  Text="Driegelijke: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Center" FontSize="20"/>
+        <TextBlock x:Name="vierGelijkeTekst"  Text="Viergelijke: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Bottom" FontSize="20"/>
+        <TextBlock x:Name="fullHouseTekst" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="4" VerticalAlignment="Top" FontSize="20" Text="Full House: "/>
+        <TextBlock x:Name="kleineStraatTekst"  Text="Kleine Straat: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="4" VerticalAlignment="Center" FontSize="20"/>
+        <TextBlock x:Name="groteStraatTekst"  Text="Grote Straat" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="4" VerticalAlignment="Bottom" FontSize="20"/>
+        <TextBlock x:Name="yahtzeeTekst"  Text="Yahtzee: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="5" VerticalAlignment="Top" FontSize="20"/>
+
+        <TextBlock x:Name="gemiddeldTekst"  Text="Gemiddeld: " Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="7" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="20"/>
         <TextBlock x:Name="EnenTekst"  Text="Enen: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Top" FontSize="20"/>
         <TextBlock x:Name="TweeenTekst"  Text="Tweeën: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Center" FontSize="20"/>
         <TextBlock x:Name="DrieenTekst"  Text="Drieën: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Bottom" FontSize="20"/>
         <TextBlock x:Name="VierenTekst"  Text="Vieren: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
         <TextBlock x:Name="VijvenTekst"  Text="Vieren: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Center" FontSize="20"/>
         <TextBlock x:Name="ZessenTekst"  Text="Zessen: " Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Bottom" FontSize="20"/>
-
-
-        <TextBlock x:Name="dobbeltt1" Visibility="Hidden" HorizontalAlignment="Left" Margin="55,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
-        <TextBlock x:Name="dobbeltt2" Visibility="Hidden" Grid.Column="1" HorizontalAlignment="Left" Margin="42.2,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
-        <TextBlock x:Name="dobbeltt3" Visibility="Hidden" Grid.Column="2" HorizontalAlignment="Left" Margin="67.4,23.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
-        <TextBlock x:Name="dobbeltt4" Visibility="Hidden" Grid.Column="3" HorizontalAlignment="Left" Margin="65.4,26.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
-        <TextBlock x:Name="dobbeltt5" Visibility="Hidden" Grid.Column="4" HorizontalAlignment="Left" Margin="66.4,26.8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3"/>
 
         <Image x:Name="een" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Grid.Row="3" Grid.Column="0"/>
         <Image x:Name="twee" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Grid.Row="3" Grid.Column="1"/>
