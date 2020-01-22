@@ -8,7 +8,6 @@
         Title="Yahtzee Groep 5" WindowState="Maximized" >
     <Grid Background="Green">
         <Grid.ColumnDefinitions>
-<<<<<<< HEAD
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -19,18 +18,6 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-=======
-            <ColumnDefinition Width="77*"/>
-            <ColumnDefinition Width="77*"/>
-            <ColumnDefinition Width="77*"/>
-            <ColumnDefinition Width="77*"/>
-            <ColumnDefinition Width="77*"/>
-            <ColumnDefinition Width="77*"/>
-            <ColumnDefinition Width="77*"/>
-            <ColumnDefinition Width="77*"/>
-            <ColumnDefinition Width="77*"/>
-            <ColumnDefinition Width="77*"/>
->>>>>>> 6cf6d4fd99f327107e5c867041463f116bbad541
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -67,25 +54,14 @@
         <Button x:Name="dobbelVast5Knop" Opacity="0" IsEnabled="False" Content="Vasthouden" Grid.Column="4" Grid.Row="13" Grid.RowSpan="2" Click="DobbelVast5Klik"/>
 
         <!--Knoppen | Selecteer knoppen-->
-<<<<<<< HEAD
-        <Button x:Name="Selecteer1Enen"   Grid.Column="9" Grid.Row="0" Opacity="1" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
-        <Button x:Name="Selecteer2Tweeen" Grid.Column="9" Grid.Row="1" Opacity="1" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
-        <Button x:Name="Selecteer3Drieen" Grid.Column="9" Grid.Row="2" Opacity="1" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
-        <Button x:Name="Selecteer4Vieren" Grid.Column="9" Grid.Row="3" Opacity="1" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
-        <Button x:Name="Selecteer5Vijven" Grid.Column="9" Grid.Row="4" Opacity="1" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
-        <Button x:Name="Selecteer6Zessen" Grid.Column="9" Grid.Row="5" Opacity="1" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
-
+        <Button x:Name="Selecteer1Enen"   Grid.Column="9" Grid.Row="0" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
+        <Button x:Name="Selecteer2Tweeen" Grid.Column="9" Grid.Row="1" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
+        <Button x:Name="Selecteer3Drieen" Grid.Column="9" Grid.Row="2" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
+        <Button x:Name="Selecteer4Vieren" Grid.Column="9" Grid.Row="3" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
+        <Button x:Name="Selecteer5Vijven" Grid.Column="9" Grid.Row="4" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
+        <Button x:Name="Selecteer6Zessen" Grid.Column="9" Grid.Row="5" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
         
-=======
-        <Button x:Name="Selecteer1Enen"   Grid.Column="9" Grid.Row="0" Opacity="1" IsEnabled="False" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="92" FontWeight="Bold" Height="25" Content="Selecteer"/>
-        <Button x:Name="Selecteer2Tweeen" Grid.Column="9" Grid.Row="1" Opacity="1" IsEnabled="False" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="92" FontWeight="Bold" Height="25" Content="Selecteer"/>
-        <Button x:Name="Selecteer3Drieen" Grid.Column="9" Grid.Row="2" Opacity="1" IsEnabled="False" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
-        <Button x:Name="Selecteer4Vieren" Grid.Column="9" Grid.Row="3" Opacity="1" IsEnabled="False" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
-        <Button x:Name="Selecteer5Vijven" Grid.Column="9" Grid.Row="4" Opacity="1" IsEnabled="False" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
-        <Button x:Name="Selecteer6Zessen" Grid.Column="9" Grid.Row="5" Opacity="1" IsEnabled="False" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
-
-
->>>>>>> 6cf6d4fd99f327107e5c867041463f116bbad541
+        
         <!--Teksten-->
 
         <!--Teksten | Standaard teksten-->
