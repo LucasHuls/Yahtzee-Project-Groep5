@@ -61,14 +61,14 @@ namespace Yahtzee
         public bool groteStraat = false;
         public bool drieGelijke = false;
         public bool vierGelijke = false;
-        
+
 
         public void Rollen_Click(object sender, RoutedEventArgs e)
         {
             waarschuwingen.Text = "Aan het gooien...";
 
             RandomGetallen(); //RandomGetallen functie aanroepen
-
+            KiesOgenKnoppen();
             StopKnoppen();
             /*SoundPlayer sd = new SoundPlayer();
             sd.SoundLocation = Server.MapPath("~/sounds/File.wav");
@@ -308,7 +308,7 @@ namespace Yahtzee
         private void Straten()
         {
             int[] dobbelstenen = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 };
-            //Kleine Straat 
+            //Kleine Straat
             if (Array.Exists(dobbelstenen, element => element == 1) && Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4)
                 || Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5)
                 || Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5) && Array.Exists(dobbelstenen, element => element == 6))
