@@ -57,6 +57,8 @@ namespace Yahtzee
         public int gegooideYahtzee = 0;
         public int getal;
 
+        public string gegooid;
+
         public bool kleineStraat = false;
         public bool groteStraat = false;
         public bool drieGelijke = false;
@@ -109,30 +111,21 @@ namespace Yahtzee
             {
                 //Random getal kiezen voor elke dobbelsteen
                 if (!alGestoptDobbelsteen1)
-                {
                     dobbelsteen1 = rnd.Next(1, 7);
-                }
                 if (!alGestoptDobbelsteen2)
-                {
                     dobbelsteen2 = rnd.Next(1, 7);
-                }
                 if (!alGestoptDobbelsteen3)
-                {
                     dobbelsteen3 = rnd.Next(1, 7);
-                }
                 if (!alGestoptDobbelsteen4)
-                {
                     dobbelsteen4 = rnd.Next(1, 7);
-                }
                 if (!alGestoptDobbelsteen5)
-                {
                     dobbelsteen5 = rnd.Next(1, 7);
-                }
             }
         }
+
         private void DobbelVast1Klik(object sender, RoutedEventArgs e)
         {
-            if (alGestoptDobbelsteen1 != true) //Zorgt ervoor dat de code niet wordt uitgevoerd als er op de stop knop is geklikt
+            if (alGestoptDobbelsteen1 != true)
             {
                 alGestoptDobbelsteen1 = true;
                 dobbelVast1Knop.Opacity = 0;
@@ -257,25 +250,23 @@ namespace Yahtzee
                 }
             }
         }
-        private bool IsXOfAKind (int CompareValue, int d1, int d2, int d3, int d4, int d5)
+        private bool IsGelijke (int vergelijk, int d1, int d2, int d3, int d4, int d5)
         {
             int i = 0;
             int result = 0;
 
-            while (i<7 && result < CompareValue)
+            while (i<7 && result < vergelijk)
             {
                 result = Convert.ToInt32(d1 == i) + Convert.ToInt32(d2 == i) + Convert.ToInt32(d3 == i) + Convert.ToInt32(d4 == i) + Convert.ToInt32(d5 == i) ; 
 
-                i++; 
-                
+                i++;
             }
-
-            return (result == CompareValue);
+            return (result == vergelijk);
         }
         
         private void DrieGelijke()
         {
-            if (IsXOfAKind( 3, dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5))
+            if (IsGelijke( 3, dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5))
             {
                 drieGelijke = true;
 
@@ -303,13 +294,11 @@ namespace Yahtzee
         }
         private void VierGelijke()
         {
-            if (IsXOfAKind(4, dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5))
+            if (IsGelijke(4, dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5))
             {
                 vierGelijke = true;
                 if (gegooideVierGelijke < 1)
                 {
-                    
-
                     int optel = dobbelsteen1 + dobbelsteen2 + dobbelsteen3 + dobbelsteen4 + dobbelsteen5;
                     score += optel;
                     rondeScore += optel;
@@ -383,6 +372,10 @@ namespace Yahtzee
 
         private void Punten()
         {
+            int[] dobbelstenen = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 };
+            bool FullHouse = (dobbelstenen.Distinct().Count() == 2) &&
+                    dobbelstenen.GroupBy(x => x).Any(g => g.Count() == 2);//Source: https://stackoverflow.com/questions/59820298/yahtzee-game-full-house
+
             /*Drie gelijke: De score is het totaal van alle ogen, als er minstens 3 dobbelstenen met hetzelfde aantal ogen zijn.
               Vier gelijke: De score is het totaal van alle ogen, als er minstens 4 dobbelstenen met hetzelfde aantal ogen zijn.
               Kleine straat: 30 punten voor 4 opeenvolgende ogenaantallen.
@@ -391,8 +384,8 @@ namespace Yahtzee
               Kans: De score is het totaal aantal ogen van alle dobbelstenen.
               Yahtzee: 50 punten als alle dobbelstenen hetzelfde aantal ogen hebben.*/
 
-                    //Functies aanroepen
-                    Straten();
+            //Functies aanroepen
+            Straten();
             if (!groteStraat && !kleineStraat)
             {
                 Yahtzee();
@@ -401,9 +394,31 @@ namespace Yahtzee
                     VierGelijke();
                     if (!vierGelijke)
                     {
-                        DrieGelijke();
-                        if (!drieGelijke)
-                            Kans();
+                        if (!FullHouse)
+                        {
+                            DrieGelijke();
+                            if (!drieGelijke)
+                                Kans();
+                        }
+                        else
+                        {
+                            //Full House
+                            if (gegooideFullHouse < 1)
+                            {
+                                score += 25;
+                                rondeScore += 25;
+                                waarschuwingen.Text = "Full House";
+                                scoreTekst.Text = Convert.ToString(score);
+                                rondeScoreTekst.Text = Convert.ToString(rondeScore);
+
+                                gegooideFullHouse++;
+                                fullHouseTekst.Text = Convert.ToString(rondeScore);
+                            }
+                            else
+                            {
+                                waarschuwingen.Text = "Je hebt al Full House gegooid";
+                            }
+                        }
                     }
                 }
             }
