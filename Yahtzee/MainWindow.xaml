@@ -41,17 +41,17 @@
         <!--Knoppen-->
 
         <!--Knoppen | Standaard knoppen-->
-        <Button x:Name="volgendeBeurt"  Grid.Column="4" Grid.Row="6" Grid.RowSpan="2" Content="Volgende Beurt"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="VolgendeBeurtKlik" Opacity="0" IsEnabled="False" />
+        <Button x:Name="NextTurn"  Grid.Column="4" Grid.Row="6" Grid.RowSpan="2" Content="Volgende Beurt"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="NextTurnClick" Opacity="0" IsEnabled="False" />
         <Button x:Name="spelregels"     Grid.Column="5" Grid.Row="0" Grid.RowSpan="2" Content="Spelregels"      VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Spelregels_Click"/>
         <Button x:Name="rollen"         Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" Content="Rol Dobbelsteen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Rollen_Click"/>
-        <Button x:Name="opnieuw"        Grid.Column="6" Grid.Row="0" Grid.RowSpan="2" Content="Speel Opnieuw"   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="NieuwSpel"/>
+        <Button x:Name="opnieuw"        Grid.Column="6" Grid.Row="0" Grid.RowSpan="2" Content="Speel Opnieuw"   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="NewGame"/>
 
         <!--Knoppen | Vasthouden knoppen-->
-        <Button x:Name="dobbelVast1Knop" Opacity="0" IsEnabled="False" Content="Vasthouden" Grid.Column="0" Grid.Row="13" Grid.RowSpan="2" Click="DobbelVast1Klik"/>
-        <Button x:Name="dobbelVast2Knop" Opacity="0" IsEnabled="False" Content="Vasthouden" Grid.Column="1" Grid.Row="13" Grid.RowSpan="2" Click="DobbelVast2Klik"/>
-        <Button x:Name="dobbelVast3Knop" Opacity="0" IsEnabled="False" Content="Vasthouden" Grid.Column="2" Grid.Row="13" Grid.RowSpan="2" Click="DobbelVast3Klik"/>
-        <Button x:Name="dobbelVast4Knop" Opacity="0" IsEnabled="False" Content="Vasthouden" Grid.Column="3" Grid.Row="13" Grid.RowSpan="2" Click="DobbelVast4Klik"/>
-        <Button x:Name="dobbelVast5Knop" Opacity="0" IsEnabled="False" Content="Vasthouden" Grid.Column="4" Grid.Row="13" Grid.RowSpan="2" Click="DobbelVast5Klik"/>
+        <Button x:Name="dobbelVast1Knop" Opacity="0" IsEnabled="False" Content="Vasthouden" Grid.Column="0" Grid.Row="13" Grid.RowSpan="2" Click="DiceStopClick1"/>
+        <Button x:Name="dobbelVast2Knop" Opacity="0" IsEnabled="False" Content="Vasthouden" Grid.Column="1" Grid.Row="13" Grid.RowSpan="2" Click="DiceStopClick2"/>
+        <Button x:Name="dobbelVast3Knop" Opacity="0" IsEnabled="False" Content="Vasthouden" Grid.Column="2" Grid.Row="13" Grid.RowSpan="2" Click="DiceStopClick3"/>
+        <Button x:Name="dobbelVast4Knop" Opacity="0" IsEnabled="False" Content="Vasthouden" Grid.Column="3" Grid.Row="13" Grid.RowSpan="2" Click="DiceStopClick4"/>
+        <Button x:Name="dobbelVast5Knop" Opacity="0" IsEnabled="False" Content="Vasthouden" Grid.Column="4" Grid.Row="13" Grid.RowSpan="2" Click="DiceStopClick5"/>
 
         <!--Knoppen | Selecteer knoppen-->
         <Button x:Name="Selecteer1Enen"   Grid.Column="9" Grid.Row="0" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
@@ -60,8 +60,8 @@
         <Button x:Name="Selecteer4Vieren" Grid.Column="9" Grid.Row="3" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
         <Button x:Name="Selecteer5Vijven" Grid.Column="9" Grid.Row="4" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
         <Button x:Name="Selecteer6Zessen" Grid.Column="9" Grid.Row="5" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
-        
-        
+
+
         <!--Teksten-->
 
         <!--Teksten | Standaard teksten-->
@@ -101,12 +101,12 @@
         <TextBlock x:Name="gemiddeldTekstPlaceholder"    Text="Gemiddeld: "      Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="14" HorizontalAlignment="Left"  VerticalAlignment="Bottom" FontSize="30"/>
 
         <!--Teksten | Onderkant Yahtzee kaart-->
-        <TextBlock x:Name="kansTekst"         Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="7"  HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="30"/>
-        <TextBlock x:Name="drieGelijkeTekst"  Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="8"  HorizontalAlignment="Right"  VerticalAlignment="Center" FontSize="30"/>
-        <TextBlock x:Name="vierGelijkeTekst"  Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="9"  HorizontalAlignment="Right"  VerticalAlignment="Center" FontSize="30"/>
+        <TextBlock x:Name="ChanceText"         Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="7"  HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="30"/>
+        <TextBlock x:Name="ThreeOfAKindText"  Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="8"  HorizontalAlignment="Right"  VerticalAlignment="Center" FontSize="30"/>
+        <TextBlock x:Name="FourOfAKindText"  Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="9"  HorizontalAlignment="Right"  VerticalAlignment="Center" FontSize="30"/>
         <TextBlock x:Name="fullHouseTekst"    Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="10" HorizontalAlignment="Right"  VerticalAlignment="Center" FontSize="30" />
-        <TextBlock x:Name="kleineStraatTekst" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="11" HorizontalAlignment="Right"  VerticalAlignment="Center" FontSize="30"/>
-        <TextBlock x:Name="groteStraatTekst"  Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="12" HorizontalAlignment="Right"  VerticalAlignment="Center" FontSize="30"/>
+        <TextBlock x:Name="SmallStraightText" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="11" HorizontalAlignment="Right"  VerticalAlignment="Center" FontSize="30"/>
+        <TextBlock x:Name="LargeStraightText"  Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="12" HorizontalAlignment="Right"  VerticalAlignment="Center" FontSize="30"/>
         <TextBlock x:Name="yahtzeeTekst"      Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="13" HorizontalAlignment="Right"  VerticalAlignment="Center" FontSize="30"/>
         <TextBlock x:Name="gemiddeldTekst"    Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="14" HorizontalAlignment="Right"  VerticalAlignment="Bottom" FontSize="30"/>
 
