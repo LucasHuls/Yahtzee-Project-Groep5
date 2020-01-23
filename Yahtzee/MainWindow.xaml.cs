@@ -25,29 +25,29 @@ namespace Yahtzee
         {
             InitializeComponent();
         }
-        //Public variabelen
+        //Public variable
         public Random rnd = new Random();
         public int aantalGooien = 0;
         //Beurt
-        public int beurt = 1; //Moet 1 zijn omdat hij bij beurt 1 start niet beurt 0!!
-        //De dobbelstenen
+        public int beurt = 1; //Must be 1 because he starts at turn 1 not turn 0 !!
+        //The dices
         public int dobbelsteen1 = 0;
         public int dobbelsteen2 = 0;
         public int dobbelsteen3 = 0;
         public int dobbelsteen4 = 0;
         public int dobbelsteen5 = 0;
-        //Gestopte dobbelstenen
+        //Stopped dices
         public bool alGestoptDobbelsteen1 = false;
         public bool alGestoptDobbelsteen2 = false;
         public bool alGestoptDobbelsteen3 = false;
         public bool alGestoptDobbelsteen4 = false;
         public bool alGestoptDobbelsteen5 = false;
-        //Score van de speler
+        //Score of player:
         public int score;
         public int rondeScore;
-        public bool yahtzeeGegooid = false; //Spel stopt wanneer er Yahtzee is gegooid
+        public bool yahtzeeGegooid = false; //Game stops when a player throws a Yahtzee
         public bool stopKnoppen = false;
-        //Wat heeft de speler gegooid
+        //What the player throws:
         public int gegooideDrieGelijke = 0;
         public int gegooideVierGelijke = 0;
         public int gegooideKans = 0;
@@ -69,7 +69,7 @@ namespace Yahtzee
         {
             waarschuwingen.Text = "Aan het gooien...";
 
-            RandomGetallen(); //RandomGetallen functie aanroepen
+            RandomGetallen(); //RandomNumber throwing
             
             StopKnoppen();
             /*SoundPlayer sd = new SoundPlayer();
@@ -77,9 +77,9 @@ namespace Yahtzee
             sd.Play();*/
             string link = @"http://www.110studios.nl/wp-content/uploads/2020/01/";
             
-            if (aantalGooien < 3) //Zorgt ervoor dat er niet vaker dan 3 keer kan worden gegooid
+            if (aantalGooien < 3) //Ensures that no more throwing is possible than 3 times
             {
-                //Als er op de stop knop is geklikt van een dobbelsteen moet hij het getal niet meer veranderen
+                //If the stop button of a dice is clicked, he must not change the number
                 if (alGestoptDobbelsteen1 != true)
                     DobbelsteenFoto(dobbelsteen1, een, link);
                 if (alGestoptDobbelsteen2 != true)
@@ -96,7 +96,7 @@ namespace Yahtzee
             }
             else
             {
-                waarschuwingen.Text = "Je hebt al 3 keer gegooid"; //Als er 3 keer is gegooid en de speler wil nog een keer gooien komt dit er te staan
+                waarschuwingen.Text = "Je hebt al 3 keer gegooid"; //If the player has thrown 3 times and the player wants to throw again, it will be shown
             }
         }
         public void DobbelsteenFoto(int dobbel, Image dobbelsteenFoto, string link)
@@ -106,9 +106,9 @@ namespace Yahtzee
 
         private void RandomGetallen()
         {
-            if (aantalGooien < 3) //Zorgt ervoor dat de dobbelstenen maximaal 3 keer een random getal krijgen
+            if (aantalGooien < 3) //Ensures that the dice receive a random number a maximum of 3 times
             {
-                //Random getal kiezen voor elke dobbelsteen
+                //Choose a random number for each die
                 if (!alGestoptDobbelsteen1)
                     dobbelsteen1 = rnd.Next(1, 7);
                 if (!alGestoptDobbelsteen2)
@@ -177,7 +177,7 @@ namespace Yahtzee
             }
             else if (aantalGooien == 3)
             {
-                //Dobbelstenen stoppen
+                //Stop the dices
                 dobbelVast1Knop.Opacity = 0;
                 dobbelVast2Knop.Opacity = 0;
                 dobbelVast3Knop.Opacity = 0;
@@ -198,7 +198,7 @@ namespace Yahtzee
         private void Straten()
         {
             int[] dobbelstenen = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 };
-            //Kleine Straat
+            //Small street
             if (Array.Exists(dobbelstenen, element => element == 1) && Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4)
                 || Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5)
                 || Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5) && Array.Exists(dobbelstenen, element => element == 6))
@@ -206,7 +206,7 @@ namespace Yahtzee
                 score += 30;
                 rondeScore += 30;
 
-                //Grote Straat
+                //Big street
                 if (Array.Exists(dobbelstenen, element => element == 1) && Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5)
                 || Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5) && Array.Exists(dobbelstenen, element => element == 6))
                 {
@@ -346,7 +346,7 @@ namespace Yahtzee
             bool FullHouse = (dobbelstenen.Distinct().Count() == 2) &&
                                 dobbelstenen.GroupBy(x => x).Any(g => g.Count() == 2);//Source: https://stackoverflow.com/questions/59820298/yahtzee-game-full-house
 
-            //Kans
+            //Chance
             if (rondeScore < 1 && !drieGelijke && !vierGelijke && !FullHouse && !kleineStraat && !groteStraat)
             {
                 if (gegooideKans < 1)
@@ -355,11 +355,11 @@ namespace Yahtzee
                     score += optel;
                     rondeScore += optel;
 
-                    scoreTekst.Text = Convert.ToString(score); //Score Tekst bijwerken
-                    rondeScoreTekst.Text = Convert.ToString(rondeScore); //Ronde Score Tekst bijwerken
-                    waarschuwingen.Text = "Kans"; //Waarschuwingen Tekst naar "Kans" zetten
+                    scoreTekst.Text = Convert.ToString(score); //Score Text updating
+                    rondeScoreTekst.Text = Convert.ToString(rondeScore); //Round Score Text update
+                    waarschuwingen.Text = "Kans"; //Warnings Set text to "Opportunity"
 
-                    gegooideKans++; //1 bij gegooideKans erbij
+                    gegooideKans++; //1 added to the chance
                     kansTekst.Text += rondeScore;
                 }
                 else
@@ -375,15 +375,15 @@ namespace Yahtzee
             bool FullHouse = (dobbelstenen.Distinct().Count() == 2) &&
                     dobbelstenen.GroupBy(x => x).Any(g => g.Count() == 2);//Source: https://stackoverflow.com/questions/59820298/yahtzee-game-full-house
 
-            /*Drie gelijke: De score is het totaal van alle ogen, als er minstens 3 dobbelstenen met hetzelfde aantal ogen zijn.
-              Vier gelijke: De score is het totaal van alle ogen, als er minstens 4 dobbelstenen met hetzelfde aantal ogen zijn.
-              Kleine straat: 30 punten voor 4 opeenvolgende ogenaantallen.
-              Grote straat: 40 punten voor 5 opeenvolgende ogenaantallen.
-              Full House: 25 punten voor 3 gelijke en één paar.
-              Kans: De score is het totaal aantal ogen van alle dobbelstenen.
-              Yahtzee: 50 punten als alle dobbelstenen hetzelfde aantal ogen hebben.*/
+            /*Three equal: The score is the total of all eyes, if there are at least 3 dice with the same number of eyes.
+              Four equal: The score is the total of all eyes, if there are at least 4 dice with the same number of eyes.
+              Small street: 30 points for 4 consecutive eyes.
+              Large street: 40 points for 5 consecutive eyes.
+              Full House: 25 points for 3 equal and one pair.
+              Chance: The score is the total number of eyes of all dice.
+              Yahtzee: 50 points if all dice have the same number of eyes.*/
 
-            //Functies aanroepen
+            //Call functions
             Straten();
             if (!groteStraat && !kleineStraat)
             {
@@ -425,14 +425,14 @@ namespace Yahtzee
             volgendeBeurt.Opacity = 1;
             volgendeBeurt.IsEnabled = true;
 
-            gemiddeldTekst.Text = Convert.ToString(score / beurt); //Laat het totale gemiddelde zien
+            gemiddeldTekst.Text = Convert.ToString(score / beurt); //Show the total average
 
             SpelAfgelopen();
             KiesOgenKnoppen();
         }
         private void StopKnoppen()
         {
-            //Resetten de "Vasthoud" knoppen
+            //Reset the "Hold" buttons
             if (stopKnoppen != true)
             {
                 dobbelVast1Knop.Opacity = 1; dobbelVast1Knop.IsEnabled = true;
@@ -444,20 +444,20 @@ namespace Yahtzee
                 stopKnoppen = true;
             }
         }
-        /*private void Kies(int[] dobbel, Button knop)
+        /*private void Choose (int [] dice, Button button)
         {
-            int tel = 0;
-            while (tel < 6)
+            int count = 0;
+            while (count <6)
             {
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i <5; i ++)
                 {
-                    if (dobbel[tel] == i)
+                    if (dice [count] == ​​i)
                     {
-                        knop.Opacity = 1;
+                        button.Opacity = 1;
                         knop.IsEnabled = true;
                     }
                 }
-                tel++;
+                count ++;
             }
         }*/
         private void KiesOgenKnoppen()
