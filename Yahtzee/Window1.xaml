@@ -35,7 +35,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <Image Source="Yat logo.png" Grid.Column="0" Stretch="fill" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="70" Width="114"/>
+        <Image Source="yahtzee-logo.png" Grid.Column="0" Stretch="fill" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="70" Width="114"/>
 
     </Grid>
 </Window>
