@@ -36,12 +36,7 @@ namespace Yahtzee
         public int dobbelsteen3 = 0;
         public int dobbelsteen4 = 0;
         public int dobbelsteen5 = 0;
-        //Gestopte dobbelstenen
-        public bool alGestoptDobbelsteen1 = false;
-        public bool alGestoptDobbelsteen2 = false;
-        public bool alGestoptDobbelsteen3 = false;
-        public bool alGestoptDobbelsteen4 = false;
-        public bool alGestoptDobbelsteen5 = false;
+
         //Score van de speler
         public int score;
         public int rondeScore;
@@ -71,22 +66,19 @@ namespace Yahtzee
 
             RandomGetallen(); //RandomGetallen functie aanroepen
             
-            StopKnoppen();
+            /*SoundPlayer sd = new SoundPlayer();
+            sd.SoundLocation = Server.MapPath("~/sounds/File.wav");
+            sd.Play();*/
             string link = @"http://www.110studios.nl/wp-content/uploads/2020/01/";
             
-            if (aantalGooien == 1) //Zorgt ervoor dat er niet vaker dan 3 keer kan worden gegooid
+            if (aantalGooien < 2) //Zorgt ervoor dat er niet vaker dan 3 keer kan worden gegooid
             {
                 //Als er op de stop knop is geklikt van een dobbelsteen moet hij het getal niet meer veranderen
-                if (alGestoptDobbelsteen1 != true)
-                    DobbelsteenFoto(dobbelsteen1, een, link);
-                if (alGestoptDobbelsteen2 != true)
-                    DobbelsteenFoto(dobbelsteen2, twee, link);
-                if (alGestoptDobbelsteen3 != true)
-                    DobbelsteenFoto(dobbelsteen3, drie, link);
-                if (alGestoptDobbelsteen4 != true)
-                    DobbelsteenFoto(dobbelsteen4, vier, link);
-                if (alGestoptDobbelsteen5 != true)
-                    DobbelsteenFoto(dobbelsteen5, vijf, link);
+                DobbelsteenFoto(dobbelsteen1, een, link);
+                DobbelsteenFoto(dobbelsteen2, twee, link);
+                DobbelsteenFoto(dobbelsteen3, drie, link);
+                DobbelsteenFoto(dobbelsteen4, vier, link);
+                DobbelsteenFoto(dobbelsteen5, vijf, link);
 
                 aantalGooien += 1;
                 AllesGestopt();
@@ -103,7 +95,7 @@ namespace Yahtzee
 
         private void RandomGetallen()
         {
-            if (aantalGooien == 1) //Zorgt ervoor dat de dobbelstenen maximaal 3 keer een random getal krijgen
+            if (aantalGooien < 2) //Zorgt ervoor dat de dobbelstenen maximaal 3 keer een random getal krijgen
             {
                 //Random getal kiezen voor elke dobbelsteen
                 dobbelsteen1 = rnd.Next(1, 7);
@@ -116,20 +108,8 @@ namespace Yahtzee
 
         private void AllesGestopt()
         {
-            if (aantalGooien == 1)
+            if (aantalGooien < 2)
             {
-                //Dobbelstenen stoppen
-                dobbelVast1Knop.Opacity = 0;
-                dobbelVast2Knop.Opacity = 0;
-                dobbelVast3Knop.Opacity = 0;
-                dobbelVast4Knop.Opacity = 0;
-                dobbelVast5Knop.Opacity = 0;
-                dobbelVast1Knop.IsEnabled = false;
-                dobbelVast2Knop.IsEnabled = false;
-                dobbelVast3Knop.IsEnabled = false;
-                dobbelVast4Knop.IsEnabled = false;
-                dobbelVast5Knop.IsEnabled = false;
-
                 rollen.IsEnabled = false;
                 rollen.Opacity = 0;
 
@@ -159,7 +139,6 @@ namespace Yahtzee
                         waarschuwingen.Text = "Grote Straat";
                         gegooideGroteStraat++;
                         scoreTekst.Text = Convert.ToString(score);
-                        rondeScoreTekst.Text = Convert.ToString(rondeScore);
                         groteStraatTekst.Text = Convert.ToString(rondeScore);
 
                         kleineStraat = false;
@@ -177,7 +156,6 @@ namespace Yahtzee
                         waarschuwingen.Text = "Kleine Straat";
                         gegooideKleineStraat++;
                         scoreTekst.Text = Convert.ToString(score);
-                        rondeScoreTekst.Text = Convert.ToString(rondeScore);
                         kleineStraatTekst.Text = Convert.ToString(rondeScore);
 
                         groteStraat = false;
@@ -217,7 +195,6 @@ namespace Yahtzee
                     rondeScore += optel;
                     waarschuwingen.Text = "Drie Gelijke";
                     scoreTekst.Text = Convert.ToString(score);
-                    rondeScoreTekst.Text = Convert.ToString(rondeScore);
 
                     gegooideDrieGelijke++;
                     drieGelijkeTekst.Text = Convert.ToString(rondeScore);
@@ -244,7 +221,6 @@ namespace Yahtzee
                     rondeScore += optel;
                     waarschuwingen.Text = "Vier Gelijke";
                     scoreTekst.Text = Convert.ToString(score);
-                    rondeScoreTekst.Text = Convert.ToString(rondeScore);
 
                     gegooideVierGelijke++;
                     vierGelijkeTekst.Text = Convert.ToString(rondeScore);
@@ -269,7 +245,6 @@ namespace Yahtzee
                 score += 50;
                 rondeScore += 50;
                 scoreTekst.Text = Convert.ToString(score);
-                rondeScoreTekst.Text = Convert.ToString(rondeScore);
                 waarschuwingen.Text = "YATHZEE!";
 
                 gegooideYahtzee++;
@@ -297,7 +272,6 @@ namespace Yahtzee
                     rondeScore += optel;
 
                     scoreTekst.Text = Convert.ToString(score); //Score Tekst bijwerken
-                    rondeScoreTekst.Text = Convert.ToString(rondeScore); //Ronde Score Tekst bijwerken
                     waarschuwingen.Text = "Kans"; //Waarschuwingen Tekst naar "Kans" zetten
 
                     gegooideKans++; //1 bij gegooideKans erbij
@@ -349,7 +323,6 @@ namespace Yahtzee
                                 rondeScore += 25;
                                 waarschuwingen.Text = "Full House";
                                 scoreTekst.Text = Convert.ToString(score);
-                                rondeScoreTekst.Text = Convert.ToString(rondeScore);
 
                                 gegooideFullHouse++;
                                 fullHouseTekst.Text = Convert.ToString(rondeScore);
@@ -363,131 +336,7 @@ namespace Yahtzee
                 }
             }
 
-            volgendeBeurt.Opacity = 1;
-            volgendeBeurt.IsEnabled = true;
-
-            gemiddeldTekst.Text = Convert.ToString(score / beurt); //Laat het totale gemiddelde zien
-
             SpelAfgelopen();
-            KiesOgenKnoppen();
-        }
-        private void StopKnoppen()
-        {
-            //Resetten de "Vasthoud" knoppen
-            if (stopKnoppen != true)
-            {
-                dobbelVast1Knop.Opacity = 1; dobbelVast1Knop.IsEnabled = true;
-                dobbelVast2Knop.Opacity = 1; dobbelVast2Knop.IsEnabled = true;
-                dobbelVast3Knop.Opacity = 1; dobbelVast3Knop.IsEnabled = true;
-                dobbelVast4Knop.Opacity = 1; dobbelVast4Knop.IsEnabled = true;
-                dobbelVast5Knop.Opacity = 1; dobbelVast5Knop.IsEnabled = true;
-
-                stopKnoppen = true;
-            }
-        }
-        /*private void Kies(int[] dobbel, Button knop)
-        {
-            int tel = 0;
-            while (tel < 6)
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    if (dobbel[tel] == i)
-                    {
-                        knop.Opacity = 1;
-                        knop.IsEnabled = true;
-                    }
-                }
-                tel++;
-            }
-        }*/
-        private void KiesOgenKnoppen()
-        {
-            ResetSelectie();
-            int[] dobbelstenen = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 };
-
-            if (dobbelsteen1 == 1 || dobbelsteen2 == 1 || dobbelsteen3 == 1 || dobbelsteen4 == 1 || dobbelsteen5 == 1)
-            {
-                Selecteer1Enen.Opacity = 1;
-                Selecteer1Enen.IsEnabled = true;
-            }
-            if (dobbelsteen1 == 2 || dobbelsteen2 == 2 || dobbelsteen3 == 2 || dobbelsteen4 == 2 || dobbelsteen5 == 2)
-            {
-                Selecteer2Tweeen.Opacity = 1;
-                Selecteer2Tweeen.IsEnabled = true;
-            }
-            if (dobbelsteen1 == 3 || dobbelsteen2 == 3 || dobbelsteen3 == 3 || dobbelsteen4 == 3 || dobbelsteen5 == 3)
-            {
-                Selecteer3Drieen.Opacity = 1;
-                Selecteer3Drieen.IsEnabled = true;
-            }
-            if (dobbelsteen1 == 4 || dobbelsteen2 == 4 || dobbelsteen3 == 4 || dobbelsteen4 == 4 || dobbelsteen5 == 4)
-            {
-                Selecteer4Vieren.Opacity = 1;
-                Selecteer4Vieren.IsEnabled = true;
-            }
-            if (dobbelsteen1 == 5 || dobbelsteen2 == 5 || dobbelsteen3 == 5 || dobbelsteen4 == 5 || dobbelsteen5 == 5)
-            {
-                Selecteer5Vijven.Opacity = 1;
-                Selecteer5Vijven.IsEnabled = true;
-            }
-            if (dobbelsteen1 == 6 || dobbelsteen2 == 6 || dobbelsteen3 == 6 || dobbelsteen4 == 6 || dobbelsteen5 == 6)
-            {
-                Selecteer6Zessen.Opacity = 1;
-                Selecteer6Zessen.IsEnabled = true;
-            }
-        }
-        private void ResetSelectie()
-        {
-            Selecteer1Enen.Opacity = 0;
-            Selecteer2Tweeen.Opacity = 0;
-            Selecteer3Drieen.Opacity = 0;
-            Selecteer4Vieren.Opacity = 0;
-            Selecteer5Vijven.Opacity = 0;
-            Selecteer6Zessen.Opacity = 0;
-
-            Selecteer1Enen.IsEnabled = false;
-            Selecteer2Tweeen.IsEnabled = false;
-            Selecteer3Drieen.IsEnabled = false;
-            Selecteer4Vieren.IsEnabled = false;
-            Selecteer5Vijven.IsEnabled = false;
-            Selecteer6Zessen.IsEnabled = false;
-        }
-        private void VolgendeBeurtKlik(object sender, RoutedEventArgs e)
-        {
-            if (yahtzeeGegooid != true)
-            {
-                rondeScore = 0;
-                beurt += 1;
-                rondeScoreTekst.Text = "0";
-
-                stopKnoppen = false;
-
-                alGestoptDobbelsteen1 = false;
-                alGestoptDobbelsteen2 = false;
-                alGestoptDobbelsteen3 = false;
-                alGestoptDobbelsteen4 = false;
-                alGestoptDobbelsteen5 = false;
-
-                kleineStraat = false;
-                groteStraat = false;
-                drieGelijke = false;
-                vierGelijke = false;
-
-                aantalGooien = 0;
-
-                dobbelsteen1 = 0;
-                dobbelsteen2 = 0;
-                dobbelsteen3 = 0;
-                dobbelsteen4 = 0;
-                dobbelsteen5 = 0;
-
-                rollen.IsEnabled = true;
-                rollen.Opacity = 1;
-
-                volgendeBeurt.IsEnabled = false;
-                volgendeBeurt.Opacity = 0;
-            }
         }
 
         private void Spelregels_Click(object sender, RoutedEventArgs e)
@@ -500,9 +349,6 @@ namespace Yahtzee
         {
             if (yahtzeeGegooid == true)
             {
-                volgendeBeurt.IsEnabled = false;
-                volgendeBeurt.Opacity = 0;
-
                 waarschuwingen.Text += " | Spel Afgelopen";
             }
         }
