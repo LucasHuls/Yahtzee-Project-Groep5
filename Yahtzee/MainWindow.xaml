@@ -60,13 +60,11 @@
         <Button x:Name="Selecteer4Vieren" Grid.Column="9" Grid.Row="3" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
         <Button x:Name="Selecteer5Vijven" Grid.Column="9" Grid.Row="4" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
         <Button x:Name="Selecteer6Zessen" Grid.Column="9" Grid.Row="5" Opacity="0" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="92" Height="25" FontWeight="Bold" Content="Selecteer"/>
-        
-        
+
+
         <!--Teksten-->
 
         <!--Teksten | Standaard teksten-->
-        <TextBlock x:Name="logo"             Text="Yahtyeet" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="50"/>
-        <TextBlock x:Name="waarschuwingen"   Text="Veel Plezier" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25"/>
 
         <!--Teksten | Score teksten-->
         <TextBlock x:Name="scorePlaceholder"      Text="Score :"        Grid.Column="0"                     Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" FontSize="25"/>
@@ -120,6 +118,8 @@
         <Image x:Name="vier" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="10" Grid.RowSpan="2" Grid.Column="3"/>
         <Image x:Name="vijf" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="10" Grid.RowSpan="2" Grid.Column="4"/>
         <Image x:Name="zes"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="10" Grid.RowSpan="2" Grid.Column="5"/>
+        <Image x:Name="Logo" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="0" Source="yahtzee-logo.png"/>
+        <Image x:Name="HaveFun" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3" Grid.Column="0" Source="Have-Fun.png" Margin="10,2,65.8,31.6"/>
 
 
     </Grid>
