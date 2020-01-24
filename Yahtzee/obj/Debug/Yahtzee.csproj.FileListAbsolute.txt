@@ -30,6 +30,24 @@ C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(step1)\Step
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(step1)\Step1\Yahtzee\obj\Debug\Yahtzee.csproj.GenerateResource.cache
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(step1)\Step1\Yahtzee\obj\Debug\Yahtzee.exe
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(step1)\Step1\Yahtzee\obj\Debug\Yahtzee.pdb
+<<<<<<< HEAD
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\bin\Debug\Yahtzee.exe.config
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\bin\Debug\Yahtzee.exe
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\bin\Debug\Yahtzee.pdb
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee.csprojAssemblyReference.cache
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\MainWindow.g.cs
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Window1.g.cs
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\App.g.cs
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.cache
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.lref
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\MainWindow.baml
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Window1.baml
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee.g.resources
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee.Properties.Resources.resources
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee.csproj.GenerateResource.cache
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee.exe
+C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee.pdb
+=======
 C:\Users\ljhul\Documents\ScrumGroep5\yahtzee\Yahtzee-Project-Groep5\Yahtzee\bin\Debug\Yahtzee.exe.config
 C:\Users\ljhul\Documents\ScrumGroep5\yahtzee\Yahtzee-Project-Groep5\Yahtzee\bin\Debug\Yahtzee.exe
 C:\Users\ljhul\Documents\ScrumGroep5\yahtzee\Yahtzee-Project-Groep5\Yahtzee\bin\Debug\Yahtzee.pdb
@@ -46,6 +64,7 @@ C:\Users\ljhul\Documents\ScrumGroep5\yahtzee\Yahtzee-Project-Groep5\Yahtzee\obj\
 C:\Users\ljhul\Documents\ScrumGroep5\yahtzee\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee.csproj.GenerateResource.cache
 C:\Users\ljhul\Documents\ScrumGroep5\yahtzee\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee.exe
 C:\Users\ljhul\Documents\ScrumGroep5\yahtzee\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee.pdb
+<<<<<<< HEAD
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\bin\Debug\Yahtzee.exe.config
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\bin\Debug\Yahtzee.exe
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\bin\Debug\Yahtzee.pdb
@@ -62,3 +81,23 @@ C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yah
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee.csproj.GenerateResource.cache
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee.exe
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee.pdb
+=======
+>>>>>>> 3243db7a14b6eb0fa676dda4f0ec2100d5da9015
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\bin\Debug\Yahtzee.exe.config
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\bin\Debug\Yahtzee.exe
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\bin\Debug\Yahtzee.pdb
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee.csprojAssemblyReference.cache
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\MainWindow.g.cs
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Window1.g.cs
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\App.g.cs
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.cache
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee_MarkupCompile.lref
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\MainWindow.baml
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Window1.baml
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee.g.resources
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee.Properties.Resources.resources
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee.csproj.GenerateResource.cache
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee.exe
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee.pdb
+>>>>>>> cba25dea9444458b7972783cf02f4e24f10aa255
+>>>>>>> 43649707cb13057f4967c80533a325cc9f0c01ed
