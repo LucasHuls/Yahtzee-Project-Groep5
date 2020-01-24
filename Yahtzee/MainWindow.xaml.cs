@@ -428,7 +428,6 @@ namespace Yahtzee
             gemiddeldTekst.Text = Convert.ToString(score / beurt); //Laat het totale gemiddelde zien
 
             SpelAfgelopen();
-            KiesOgenKnoppen();
         }
         private void StopKnoppen()
         {
@@ -444,74 +443,7 @@ namespace Yahtzee
                 stopKnoppen = true;
             }
         }
-        /*private void Kies(int[] dobbel, Button knop)
-        {
-            int tel = 0;
-            while (tel < 6)
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    if (dobbel[tel] == i)
-                    {
-                        knop.Opacity = 1;
-                        knop.IsEnabled = true;
-                    }
-                }
-                tel++;
-            }
-        }*/
-        private void KiesOgenKnoppen()
-        {
-            ResetSelectie();
-            int[] dobbelstenen = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 };
 
-            if (dobbelsteen1 == 1 || dobbelsteen2 == 1 || dobbelsteen3 == 1 || dobbelsteen4 == 1 || dobbelsteen5 == 1)
-            {
-                Selecteer1Enen.Opacity = 1;
-                Selecteer1Enen.IsEnabled = true;
-            }
-            if (dobbelsteen1 == 2 || dobbelsteen2 == 2 || dobbelsteen3 == 2 || dobbelsteen4 == 2 || dobbelsteen5 == 2)
-            {
-                Selecteer2Tweeen.Opacity = 1;
-                Selecteer2Tweeen.IsEnabled = true;
-            }
-            if (dobbelsteen1 == 3 || dobbelsteen2 == 3 || dobbelsteen3 == 3 || dobbelsteen4 == 3 || dobbelsteen5 == 3)
-            {
-                Selecteer3Drieen.Opacity = 1;
-                Selecteer3Drieen.IsEnabled = true;
-            }
-            if (dobbelsteen1 == 4 || dobbelsteen2 == 4 || dobbelsteen3 == 4 || dobbelsteen4 == 4 || dobbelsteen5 == 4)
-            {
-                Selecteer4Vieren.Opacity = 1;
-                Selecteer4Vieren.IsEnabled = true;
-            }
-            if (dobbelsteen1 == 5 || dobbelsteen2 == 5 || dobbelsteen3 == 5 || dobbelsteen4 == 5 || dobbelsteen5 == 5)
-            {
-                Selecteer5Vijven.Opacity = 1;
-                Selecteer5Vijven.IsEnabled = true;
-            }
-            if (dobbelsteen1 == 6 || dobbelsteen2 == 6 || dobbelsteen3 == 6 || dobbelsteen4 == 6 || dobbelsteen5 == 6)
-            {
-                Selecteer6Zessen.Opacity = 1;
-                Selecteer6Zessen.IsEnabled = true;
-            }
-        }
-        private void ResetSelectie()
-        {
-            Selecteer1Enen.Opacity = 0;
-            Selecteer2Tweeen.Opacity = 0;
-            Selecteer3Drieen.Opacity = 0;
-            Selecteer4Vieren.Opacity = 0;
-            Selecteer5Vijven.Opacity = 0;
-            Selecteer6Zessen.Opacity = 0;
-
-            Selecteer1Enen.IsEnabled = false;
-            Selecteer2Tweeen.IsEnabled = false;
-            Selecteer3Drieen.IsEnabled = false;
-            Selecteer4Vieren.IsEnabled = false;
-            Selecteer5Vijven.IsEnabled = false;
-            Selecteer6Zessen.IsEnabled = false;
-        }
         private void VolgendeBeurtKlik(object sender, RoutedEventArgs e)
         {
             if (yahtzeeGegooid != true)
