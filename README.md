@@ -23,7 +23,7 @@
 
 ## Designs
 
-| Yahtzee 									 | Design-1 						   |
+| Regels 									 | Yahtzee						   |
 | :---:        									 |     :---:      							   |
 | <img src="readme-bestanden/Screenshot1.png" width="500">   | <img src="readme-bestanden/Screenshot2.png" width="500">     |
 
