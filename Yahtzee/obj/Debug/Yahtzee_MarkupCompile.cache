@@ -4,12 +4,20 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\
+=======
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\
+>>>>>>> cba25dea9444458b7972783cf02f4e24f10aa255
 Yahtzee
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\App.xaml
+=======
+C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\App.xaml
+>>>>>>> cba25dea9444458b7972783cf02f4e24f10aa255
 2462529049
 
 <<<<<<< HEAD
