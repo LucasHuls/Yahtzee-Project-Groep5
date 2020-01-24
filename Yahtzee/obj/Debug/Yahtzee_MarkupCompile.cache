@@ -12,9 +12,13 @@ DEBUG;TRACE
 C:\Users\Eigenaar\Desktop\School\ScrumGroep5\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\App.xaml
 2462529049
 
+<<<<<<< HEAD
 7-1878525374
+=======
+6-1344379206
+>>>>>>> ad7d8e74397d2007521745a4f40457e82f848dc4
 14-1683109565
 MainWindow.xaml;Window1.xaml;
 
-True
+False
 

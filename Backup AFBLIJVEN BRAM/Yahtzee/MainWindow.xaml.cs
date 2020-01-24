@@ -57,138 +57,40 @@ namespace Yahtzee
         public int gegooideYahtzee = 0;
         public int getal;
 
+        public string gegooid;
+
+        public bool kleineStraat = false;
+        public bool groteStraat = false;
+        public bool drieGelijke = false;
+        public bool vierGelijke = false;
+
+
         public void Rollen_Click(object sender, RoutedEventArgs e)
         {
-            RandomGetallen(); //RandomGetallen functie aanroepen
+            waarschuwingen.Text = "Aan het gooien...";
 
+            RandomGetallen(); //RandomGetallen functie aanroepen
+            
             StopKnoppen();
             /*SoundPlayer sd = new SoundPlayer();
             sd.SoundLocation = Server.MapPath("~/sounds/File.wav");
             sd.Play();*/
-
+            string link = @"http://www.110studios.nl/wp-content/uploads/2020/01/";
+            
             if (aantalGooien < 3) //Zorgt ervoor dat er niet vaker dan 3 keer kan worden gegooid
             {
                 //Als er op de stop knop is geklikt van een dobbelsteen moet hij het getal niet meer veranderen
                 if (alGestoptDobbelsteen1 != true)
-                {
-                    switch (dobbelsteen1)
-                    {
-                        case 1:
-                            een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/XJKR2Xd/een.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 2:
-                            een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/hmPLq6m/twee.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 3:
-                            een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/1rQXN5Q/drie.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 4:
-                            een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/frQ4DQq/vier.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 5:
-                            een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/cXJDkc0/vijf.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 6:
-                            een.Source = new BitmapImage(new Uri(@"https://i.ibb.co/DbymGG4/zes.png", UriKind.RelativeOrAbsolute));
-                            break;
-                    }
-                }
+                    DobbelsteenFoto(dobbelsteen1, een, link);
                 if (alGestoptDobbelsteen2 != true)
-                {
-                    switch (dobbelsteen2)
-                    {
-                        case 1:
-                            twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/XJKR2Xd/een.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 2:
-                            twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/hmPLq6m/twee.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 3:
-                            twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/1rQXN5Q/drie.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 4:
-                            twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/frQ4DQq/vier.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 5:
-                            twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/cXJDkc0/vijf.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 6:
-                            twee.Source = new BitmapImage(new Uri(@"https://i.ibb.co/DbymGG4/zes.png", UriKind.RelativeOrAbsolute));
-                            break;
-                    }
-                }
+                    DobbelsteenFoto(dobbelsteen2, twee, link);
                 if (alGestoptDobbelsteen3 != true)
-                {
-                    switch (dobbelsteen3)
-                    {
-                        case 1:
-                            drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/XJKR2Xd/een.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 2:
-                            drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/hmPLq6m/twee.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 3:
-                            drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/1rQXN5Q/drie.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 4:
-                            drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/frQ4DQq/vier.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 5:
-                            drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/cXJDkc0/vijf.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 6:
-                            drie.Source = new BitmapImage(new Uri(@"https://i.ibb.co/DbymGG4/zes.png", UriKind.RelativeOrAbsolute));
-                            break;
-                    }
-                }
+                    DobbelsteenFoto(dobbelsteen3, drie, link);
                 if (alGestoptDobbelsteen4 != true)
-                {
-                    switch (dobbelsteen4)
-                    {
-                        case 1:
-                            vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/XJKR2Xd/een.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 2:
-                            vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/hmPLq6m/twee.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 3:
-                            vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/1rQXN5Q/drie.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 4:
-                            vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/frQ4DQq/vier.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 5:
-                            vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/cXJDkc0/vijf.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 6:
-                            vier.Source = new BitmapImage(new Uri(@"https://i.ibb.co/DbymGG4/zes.png", UriKind.RelativeOrAbsolute));
-                            break;
-                    }
-                }
+                    DobbelsteenFoto(dobbelsteen4, vier, link);
                 if (alGestoptDobbelsteen5 != true)
-                {
-                    switch (dobbelsteen5)
-                    {
-                        case 1:
-                            vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/XJKR2Xd/een.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 2:
-                            vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/hmPLq6m/twee.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 3:
-                            vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/1rQXN5Q/drie.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 4:
-                            vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/frQ4DQq/vier.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 5:
-                            vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/cXJDkc0/vijf.png", UriKind.RelativeOrAbsolute));
-                            break;
-                        case 6:
-                            vijf.Source = new BitmapImage(new Uri(@"https://i.ibb.co/DbymGG4/zes.png", UriKind.RelativeOrAbsolute));
-                            break;
-                    }
-                }
+                    DobbelsteenFoto(dobbelsteen5, vijf, link);
+
                 aantalGooien += 1;
                 AllesGestopt();
             }
@@ -197,21 +99,32 @@ namespace Yahtzee
                 waarschuwingen.Text = "Je hebt al 3 keer gegooid"; //Als er 3 keer is gegooid en de speler wil nog een keer gooien komt dit er te staan
             }
         }
+        public void DobbelsteenFoto(int dobbel, Image dobbelsteenFoto, string link)
+        {
+            dobbelsteenFoto.Source = new BitmapImage(new Uri(link + dobbel + ".png", UriKind.RelativeOrAbsolute));
+        }
+
         private void RandomGetallen()
         {
             if (aantalGooien < 3) //Zorgt ervoor dat de dobbelstenen maximaal 3 keer een random getal krijgen
             {
                 //Random getal kiezen voor elke dobbelsteen
-                dobbelsteen1 = rnd.Next(1, 2);
-                dobbelsteen2 = rnd.Next(1, 2);
-                dobbelsteen3 = rnd.Next(1, 2);
-                dobbelsteen4 = rnd.Next(2, 3);
-                dobbelsteen5 = rnd.Next(2, 3);
+                if (!alGestoptDobbelsteen1)
+                    dobbelsteen1 = rnd.Next(1, 7);
+                if (!alGestoptDobbelsteen2)
+                    dobbelsteen2 = rnd.Next(1, 7);
+                if (!alGestoptDobbelsteen3)
+                    dobbelsteen3 = rnd.Next(1, 7);
+                if (!alGestoptDobbelsteen4)
+                    dobbelsteen4 = rnd.Next(1, 7);
+                if (!alGestoptDobbelsteen5)
+                    dobbelsteen5 = rnd.Next(1, 7);
             }
         }
+
         private void DobbelVast1Klik(object sender, RoutedEventArgs e)
         {
-            if (alGestoptDobbelsteen1 != true) //Zorgt ervoor dat de code niet wordt uitgevoerd als er op de stop knop is geklikt
+            if (alGestoptDobbelsteen1 != true)
             {
                 alGestoptDobbelsteen1 = true;
                 dobbelVast1Knop.Opacity = 0;
@@ -282,25 +195,9 @@ namespace Yahtzee
                 Punten();
             }
         }
-        private void Punten()
+        private void Straten()
         {
             int[] dobbelstenen = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 };
-            int totaalScore = dobbelsteen1 + dobbelsteen2 + dobbelsteen3 + dobbelsteen4 + dobbelsteen5;
-            bool drieGelijke = false;
-            bool vierGelijke = false;
-            bool FullHouse = dobbelstenen
-                                .GroupBy(g => g)
-                                .Where(g => (g.Count() == 2) || (g.Count() == 3))
-                                .Count() == 2;
-
-            /*Drie gelijke: De score is het totaal van alle ogen, als er minstens 3 dobbelstenen met hetzelfde aantal ogen zijn.
-              Vier gelijke: De score is het totaal van alle ogen, als er minstens 4 dobbelstenen met hetzelfde aantal ogen zijn.
-              Kleine straat: 30 punten voor 4 opeenvolgende ogenaantallen.
-              Grote straat: 40 punten voor 5 opeenvolgende ogenaantallen.
-              Full House: 25 punten voor 3 gelijke en één paar.
-              Kans: De score is het totaal aantal ogen van alle dobbelstenen.
-              Yahtzee: 50 punten als alle dobbelstenen hetzelfde aantal ogen hebben.*/
-
             //Kleine Straat
             if (Array.Exists(dobbelstenen, element => element == 1) && Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4)
                 || Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5)
@@ -309,26 +206,124 @@ namespace Yahtzee
                 score += 30;
                 rondeScore += 30;
 
-                //Grote straat
+                //Grote Straat
                 if (Array.Exists(dobbelstenen, element => element == 1) && Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5)
                 || Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5) && Array.Exists(dobbelstenen, element => element == 6))
                 {
-                    score += 10;
-                    rondeScore += 10;
-                    waarschuwingen.Text = "Grote Straat!";
-                    gegooideGroteStraat++;
+                    if (gegooideGroteStraat < 1)
+                    {
+                        score += 10;
+                        rondeScore += 10;
+
+                        waarschuwingen.Text = "Grote Straat";
+                        gegooideGroteStraat++;
+                        scoreTekst.Text = Convert.ToString(score);
+                        rondeScoreTekst.Text = Convert.ToString(rondeScore);
+                        groteStraatTekst.Text = Convert.ToString(rondeScore);
+
+                        kleineStraat = false;
+                        groteStraat = true;
+                    }
+                    else
+                    {
+                        waarschuwingen.Text = "Je hebt al Grote Straat gegooid";
+                    }
                 }
                 else
                 {
-                    waarschuwingen.Text = "Kleine Straat";
-                    gegooideKleineStraat++;
-                }
-                scoreTekst.Text = Convert.ToString(score);
-                rondeScoreTekst.Text = Convert.ToString(rondeScore);
-            }
+                    if (gegooideKleineStraat < 1)
+                    {
+                        waarschuwingen.Text = "Kleine Straat";
+                        gegooideKleineStraat++;
+                        scoreTekst.Text = Convert.ToString(score);
+                        rondeScoreTekst.Text = Convert.ToString(rondeScore);
+                        kleineStraatTekst.Text = Convert.ToString(rondeScore);
 
+                        groteStraat = false;
+                        kleineStraat = true;
+                    }
+                    else
+                    {
+                        waarschuwingen.Text = "Je hebt al Kleine Straat gegooid";
+                    }
+                }
+            }
+        }
+        private bool IsGelijke (int vergelijk, int d1, int d2, int d3, int d4, int d5)
+        {
+            int i = 0;
+            int result = 0;
+
+            while (i<7 && result < vergelijk)
+            {
+                result = Convert.ToInt32(d1 == i) + Convert.ToInt32(d2 == i) + Convert.ToInt32(d3 == i) + Convert.ToInt32(d4 == i) + Convert.ToInt32(d5 == i) ; 
+
+                i++;
+            }
+            return (result == vergelijk);
+        }
+        
+        private void DrieGelijke()
+        {
+            if (IsGelijke( 3, dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5))
+            {
+                drieGelijke = true;
+
+                if (gegooideDrieGelijke < 1)
+                {
+                    int optel = dobbelsteen1 + dobbelsteen2 + dobbelsteen3 + dobbelsteen4 + dobbelsteen5;
+                    score += optel;
+                    rondeScore += optel;
+                    waarschuwingen.Text = "Drie Gelijke";
+                    scoreTekst.Text = Convert.ToString(score);
+                    rondeScoreTekst.Text = Convert.ToString(rondeScore);
+
+                    gegooideDrieGelijke++;
+                    drieGelijkeTekst.Text = Convert.ToString(rondeScore);
+                }
+                else
+                {
+                    waarschuwingen.Text = "Je hebt al Drie Gelijke gegooid";
+                }
+            }
+            else
+            {
+                drieGelijke = false;
+            }
+        }
+        private void VierGelijke()
+        {
+            if (IsGelijke(4, dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5))
+            {
+                vierGelijke = true;
+                if (gegooideVierGelijke < 1)
+                {
+                    int optel = dobbelsteen1 + dobbelsteen2 + dobbelsteen3 + dobbelsteen4 + dobbelsteen5;
+                    score += optel;
+                    rondeScore += optel;
+                    waarschuwingen.Text = "Vier Gelijke";
+                    scoreTekst.Text = Convert.ToString(score);
+                    rondeScoreTekst.Text = Convert.ToString(rondeScore);
+
+                    gegooideVierGelijke++;
+                    vierGelijkeTekst.Text = Convert.ToString(rondeScore);
+                }
+                else
+                {
+                    waarschuwingen.Text = "Je hebt al Vier Gelijke gegooid";
+                }
+            }
+            else
+            {
+                vierGelijke = false;
+            }
+        }
+        private void Yahtzee()
+        {
+            int[] dobbelstenen = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 };
             //Yahtzee
-            if (dobbelstenen[0] == dobbelstenen[1] && dobbelstenen[1] == dobbelstenen[2] && dobbelstenen[2] == dobbelstenen[3] && dobbelstenen[3] == dobbelstenen[4])
+            if (dobbelstenen[0] == dobbelstenen[1] && dobbelstenen[1] == dobbelstenen[2] && dobbelstenen[2] == dobbelstenen[3] && dobbelstenen[3] == dobbelstenen[4]
+                && !groteStraat && !kleineStraat)
             {
                 score += 50;
                 rondeScore += 50;
@@ -342,110 +337,17 @@ namespace Yahtzee
             }
             else
             {
-                //Drie Gelijke
-                if (FullHouse != true)
-                {
-                    for (int i = 0; i <= 6; i++)
-                    {
-                        int tellen = 0;
-                        for (int j = 0; j < 5; j++)
-                        {
-                            if (dobbelstenen[j] == i)
-                            {
-                                tellen++;
-                                getal = dobbelstenen[j];
-                            }
-                            if (tellen == 3)
-                            {
-                                drieGelijke = true;
-                            }
-                        }
-                    }
-                }
-
-                if (drieGelijke == true)
-                {
-                    //Vier gelijke
-                    for (int k = 0; k <= 6; k++)
-                    {
-                        int tellen = 0;
-                        for (int f = 0; f < 5; f++)
-                        {
-                            if (dobbelstenen[f] == k)
-                            {
-                                tellen++;
-                            }
-                            if (tellen == 4)
-                            {
-                                drieGelijke = false;
-                                vierGelijke = true;
-                            }
-                        }
-                    }
-                }
-
-                //Full House
-                if (FullHouse == true)
-                {
-                    if (gegooideFullHouse < 1)
-                    {
-                        score += 25;
-                        rondeScore += 25;
-                        waarschuwingen.Text = "Full House";
-                        scoreTekst.Text = Convert.ToString(score);
-                        rondeScoreTekst.Text = Convert.ToString(rondeScore);
-
-                        gegooideFullHouse++;
-                        fullHouseTekst.Text += rondeScore;
-                    }
-                    else
-                    {
-                        waarschuwingen.Text = "Je hebt al Full House gegooid";
-                    }
-                }
-                
-                if (drieGelijke == true)
-                {
-                    if (gegooideDrieGelijke < 1)
-                    {
-                        int optel = dobbelstenen[0] + dobbelstenen[1] + dobbelstenen[2] + dobbelstenen[3] + dobbelstenen[4];
-                        score += optel;
-                        rondeScore += optel;
-                        waarschuwingen.Text = "Drie Gelijke";
-                        scoreTekst.Text = Convert.ToString(score);
-                        rondeScoreTekst.Text = Convert.ToString(rondeScore);
-
-                        gegooideDrieGelijke++;
-                        drieGelijkeTekst.Text += rondeScore;
-                    }
-                    else
-                    {
-                        waarschuwingen.Text = "Je hebt al Drie Gelijke gegooid";
-                    }
-                }
-                if (vierGelijke == true)
-                {
-                    if (gegooideVierGelijke < 1)
-                    {
-                        int optel = dobbelstenen[0] + dobbelstenen[1] + dobbelstenen[2] + dobbelstenen[3] + dobbelstenen[4];
-                        score += optel;
-                        rondeScore += optel;
-                        waarschuwingen.Text = "Vier Gelijke";
-                        scoreTekst.Text = Convert.ToString(score);
-                        rondeScoreTekst.Text = Convert.ToString(rondeScore);
-
-                        gegooideVierGelijke++;
-                        vierGelijkeTekst.Text += rondeScore;
-                    }
-                    else
-                    {
-                        waarschuwingen.Text = "Je hebt al Vier Gelijke gegooid";
-                    }
-                }
+                yahtzeeGegooid = false;
             }
+        }
+        private void Kans()
+        {
+            int[] dobbelstenen = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 };
+            bool FullHouse = (dobbelstenen.Distinct().Count() == 2) &&
+                                dobbelstenen.GroupBy(x => x).Any(g => g.Count() == 2);//Source: https://stackoverflow.com/questions/59820298/yahtzee-game-full-house
 
             //Kans
-            if (rondeScore == 0 && drieGelijke == false && vierGelijke == false && FullHouse == false)
+            if (rondeScore < 1 && !drieGelijke && !vierGelijke && !FullHouse && !kleineStraat && !groteStraat)
             {
                 if (gegooideKans < 1)
                 {
@@ -465,37 +367,68 @@ namespace Yahtzee
                     waarschuwingen.Text = "Je hebt al Kans gegooid";
                 }
             }
+        }
 
-            //+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+        private void Punten()
+        {
+            int[] dobbelstenen = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 };
+            bool FullHouse = (dobbelstenen.Distinct().Count() == 2) &&
+                    dobbelstenen.GroupBy(x => x).Any(g => g.Count() == 2);//Source: https://stackoverflow.com/questions/59820298/yahtzee-game-full-house
 
-            //Viergelijke
+            /*Drie gelijke: De score is het totaal van alle ogen, als er minstens 3 dobbelstenen met hetzelfde aantal ogen zijn.
+              Vier gelijke: De score is het totaal van alle ogen, als er minstens 4 dobbelstenen met hetzelfde aantal ogen zijn.
+              Kleine straat: 30 punten voor 4 opeenvolgende ogenaantallen.
+              Grote straat: 40 punten voor 5 opeenvolgende ogenaantallen.
+              Full House: 25 punten voor 3 gelijke en één paar.
+              Kans: De score is het totaal aantal ogen van alle dobbelstenen.
+              Yahtzee: 50 punten als alle dobbelstenen hetzelfde aantal ogen hebben.*/
+
+            //Functies aanroepen
+            Straten();
+            if (!groteStraat && !kleineStraat)
+            {
+                Yahtzee();
+                if (!yahtzeeGegooid)
+                {
+                    VierGelijke();
+                    if (!vierGelijke)
+                    {
+                        if (!FullHouse)
+                        {
+                            DrieGelijke();
+                            if (!drieGelijke)
+                                Kans();
+                        }
+                        else
+                        {
+                            //Full House
+                            if (gegooideFullHouse < 1)
+                            {
+                                score += 25;
+                                rondeScore += 25;
+                                waarschuwingen.Text = "Full House";
+                                scoreTekst.Text = Convert.ToString(score);
+                                rondeScoreTekst.Text = Convert.ToString(rondeScore);
+
+                                gegooideFullHouse++;
+                                fullHouseTekst.Text = Convert.ToString(rondeScore);
+                            }
+                            else
+                            {
+                                waarschuwingen.Text = "Je hebt al Full House gegooid";
+                            }
+                        }
+                    }
+                }
+            }
+
             volgendeBeurt.Opacity = 1;
             volgendeBeurt.IsEnabled = true;
 
-            if (gegooideVierGelijke > 1)
-            {
-                Selecteer3.Opacity = 1;
-            }
-
-            //Driegelijke
-            volgendeBeurt.Opacity = 1;
-            volgendeBeurt.IsEnabled = true;
-
-            if (gegooideDrieGelijke > 1)
-            {
-                Selecteer2.Opacity = 1;
-            }
-
-            //Fullhouse
-            volgendeBeurt.Opacity = 1;
-            volgendeBeurt.IsEnabled = true;
-
-            if (gegooideFullHouse > 1)
-            {
-                Selecteer1.Opacity = 1;
-            }
+            gemiddeldTekst.Text = Convert.ToString(score / beurt); //Laat het totale gemiddelde zien
 
             SpelAfgelopen();
+            KiesOgenKnoppen();
         }
         private void StopKnoppen()
         {
@@ -510,6 +443,74 @@ namespace Yahtzee
 
                 stopKnoppen = true;
             }
+        }
+        /*private void Kies(int[] dobbel, Button knop)
+        {
+            int tel = 0;
+            while (tel < 6)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    if (dobbel[tel] == i)
+                    {
+                        knop.Opacity = 1;
+                        knop.IsEnabled = true;
+                    }
+                }
+                tel++;
+            }
+        }*/
+        private void KiesOgenKnoppen()
+        {
+            ResetSelectie();
+            int[] dobbelstenen = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 };
+
+            if (dobbelsteen1 == 1 || dobbelsteen2 == 1 || dobbelsteen3 == 1 || dobbelsteen4 == 1 || dobbelsteen5 == 1)
+            {
+                Selecteer1Enen.Opacity = 1;
+                Selecteer1Enen.IsEnabled = true;
+            }
+            if (dobbelsteen1 == 2 || dobbelsteen2 == 2 || dobbelsteen3 == 2 || dobbelsteen4 == 2 || dobbelsteen5 == 2)
+            {
+                Selecteer2Tweeen.Opacity = 1;
+                Selecteer2Tweeen.IsEnabled = true;
+            }
+            if (dobbelsteen1 == 3 || dobbelsteen2 == 3 || dobbelsteen3 == 3 || dobbelsteen4 == 3 || dobbelsteen5 == 3)
+            {
+                Selecteer3Drieen.Opacity = 1;
+                Selecteer3Drieen.IsEnabled = true;
+            }
+            if (dobbelsteen1 == 4 || dobbelsteen2 == 4 || dobbelsteen3 == 4 || dobbelsteen4 == 4 || dobbelsteen5 == 4)
+            {
+                Selecteer4Vieren.Opacity = 1;
+                Selecteer4Vieren.IsEnabled = true;
+            }
+            if (dobbelsteen1 == 5 || dobbelsteen2 == 5 || dobbelsteen3 == 5 || dobbelsteen4 == 5 || dobbelsteen5 == 5)
+            {
+                Selecteer5Vijven.Opacity = 1;
+                Selecteer5Vijven.IsEnabled = true;
+            }
+            if (dobbelsteen1 == 6 || dobbelsteen2 == 6 || dobbelsteen3 == 6 || dobbelsteen4 == 6 || dobbelsteen5 == 6)
+            {
+                Selecteer6Zessen.Opacity = 1;
+                Selecteer6Zessen.IsEnabled = true;
+            }
+        }
+        private void ResetSelectie()
+        {
+            Selecteer1Enen.Opacity = 0;
+            Selecteer2Tweeen.Opacity = 0;
+            Selecteer3Drieen.Opacity = 0;
+            Selecteer4Vieren.Opacity = 0;
+            Selecteer5Vijven.Opacity = 0;
+            Selecteer6Zessen.Opacity = 0;
+
+            Selecteer1Enen.IsEnabled = false;
+            Selecteer2Tweeen.IsEnabled = false;
+            Selecteer3Drieen.IsEnabled = false;
+            Selecteer4Vieren.IsEnabled = false;
+            Selecteer5Vijven.IsEnabled = false;
+            Selecteer6Zessen.IsEnabled = false;
         }
         private void VolgendeBeurtKlik(object sender, RoutedEventArgs e)
         {
@@ -526,6 +527,11 @@ namespace Yahtzee
                 alGestoptDobbelsteen3 = false;
                 alGestoptDobbelsteen4 = false;
                 alGestoptDobbelsteen5 = false;
+
+                kleineStraat = false;
+                groteStraat = false;
+                drieGelijke = false;
+                vierGelijke = false;
 
                 aantalGooien = 0;
 
@@ -556,16 +562,7 @@ namespace Yahtzee
                 volgendeBeurt.IsEnabled = false;
                 volgendeBeurt.Opacity = 0;
 
-                waarschuwingen.Text = "Spel Afgelopen";
-
-                /*kansTekst.Text += gegooideKans;
-                drieGelijkeTekst.Text += gegooideDrieGelijke;
-                vierGelijkeTekst.Text += gegooideVierGelijke;
-                fullHouseTekst.Text += gegooideFullHouse;
-                kleineStraatTekst.Text += gegooideKleineStraat;
-                groteStraatTekst.Text += gegooideGroteStraat;
-                yahtzeeTekst.Text += gegooideYahtzee;
-                gemiddeldTekst.Text += score / beurt;*/
+                waarschuwingen.Text += " | Spel Afgelopen";
             }
         }
 
@@ -573,12 +570,6 @@ namespace Yahtzee
         {
             Application.Current.Shutdown();
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
-        }
-
-       
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
