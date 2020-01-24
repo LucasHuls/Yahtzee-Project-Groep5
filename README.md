@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/LucasHuls/Yahtzee-Project-Groep5">
-    <img src="yahtzee/yahtzee-logo.png" alt="Logo">
+    <img src="Yahtzee/yahtzee-logo.png" alt="Logo">
   </a>
 
   <h3 align="center">Scrum Groep 5</h3>
@@ -25,7 +25,7 @@
 
 | Yahtzee 									 | Design-1 						   |
 | :---:        									 |     :---:      							   |
-| <img src="readme-bestanden/Screenshot1" width="500">   | <img src="readme-bestanden/Screenshot2" width="500">     |
+| <img src="readme-bestanden/Screenshot1.png" width="500">   | <img src="readme-bestanden/Screenshot2.png" width="500">     |
 
 ## Yahtzee
 
