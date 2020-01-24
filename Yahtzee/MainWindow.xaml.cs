@@ -75,14 +75,9 @@ namespace Yahtzee
             
             if (aantalGooien < 3) //Ensures that no more throwing is possible than 3 times
             {
-<<<<<<< HEAD
-                if (alGestoptDobbelsteen1 != true) //Als er op de stop knop is geklikt van een dobbelsteen moet hij het getal niet meer veranderen
-                    DobbelsteenFoto(dobbelsteen1, een, link); //Roept de functie aan die de goede dobbelsteen laat zien
-=======
                 //If the stop button of a dice is clicked, he must not change the number
                 if (alGestoptDobbelsteen1 != true)
                     DobbelsteenFoto(dobbelsteen1, een, link);
->>>>>>> 43649707cb13057f4967c80533a325cc9f0c01ed
                 if (alGestoptDobbelsteen2 != true)
                     DobbelsteenFoto(dobbelsteen2, twee, link);
                 if (alGestoptDobbelsteen3 != true)
@@ -179,13 +174,8 @@ namespace Yahtzee
             }
             else if (aantalGooien == 3) //Als er 3 keer is gegooid
             {
-<<<<<<< HEAD
-                //Dobbelstenen stoppen
-                dobbelVast1Knop.Opacity = 0; //Laat de knop verdwijnen
-=======
                 //Stop the dices
                 dobbelVast1Knop.Opacity = 0;
->>>>>>> 43649707cb13057f4967c80533a325cc9f0c01ed
                 dobbelVast2Knop.Opacity = 0;
                 dobbelVast3Knop.Opacity = 0;
                 dobbelVast4Knop.Opacity = 0;
@@ -203,13 +193,8 @@ namespace Yahtzee
         }
         private void Straten() //Controleert of er een Kleine- of Grote- straat is gegooid
         {
-<<<<<<< HEAD
-            int[] dobbelstenen = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 }; //Maakt een lijst van de dobbelstenen
-            //Controleert op Kleine Straat
-=======
             int[] dobbelstenen = { dobbelsteen1, dobbelsteen2, dobbelsteen3, dobbelsteen4, dobbelsteen5 };
             //Small street
->>>>>>> 43649707cb13057f4967c80533a325cc9f0c01ed
             if (Array.Exists(dobbelstenen, element => element == 1) && Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4)
                 || Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5)
                 || Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5) && Array.Exists(dobbelstenen, element => element == 6))
@@ -217,11 +202,7 @@ namespace Yahtzee
                 score += 30; //Maakt de score 30 punten hoger
                 rondeScore += 30; //Maakt de rondescore 30 punten hoger
 
-<<<<<<< HEAD
-                //Controleert op Grote Straat
-=======
                 //Big street
->>>>>>> 43649707cb13057f4967c80533a325cc9f0c01ed
                 if (Array.Exists(dobbelstenen, element => element == 1) && Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5)
                 || Array.Exists(dobbelstenen, element => element == 2) && Array.Exists(dobbelstenen, element => element == 3) && Array.Exists(dobbelstenen, element => element == 4) && Array.Exists(dobbelstenen, element => element == 5) && Array.Exists(dobbelstenen, element => element == 6))
                 {
@@ -464,26 +445,6 @@ namespace Yahtzee
                 stopKnoppen = true;
             }
         }
-<<<<<<< HEAD
-
-=======
-        /*private void Choose (int [] dice, Button button)
-        {
-            int count = 0;
-            while (count <6)
-            {
-                for (int i = 0; i <5; i ++)
-                {
-                    if (dice [count] == ​​i)
-                    {
-                        button.Opacity = 1;
-                        knop.IsEnabled = true;
-                    }
-                }
-                count ++;
-            }
-        }*/
->>>>>>> 43649707cb13057f4967c80533a325cc9f0c01ed
         private void KiesOgenKnoppen()
         {
             ResetSelectie();

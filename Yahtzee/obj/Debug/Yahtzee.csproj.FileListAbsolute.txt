@@ -64,7 +64,6 @@ C:\Users\ljhul\Documents\ScrumGroep5\yahtzee\Yahtzee-Project-Groep5\Yahtzee\obj\
 C:\Users\ljhul\Documents\ScrumGroep5\yahtzee\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee.csproj.GenerateResource.cache
 C:\Users\ljhul\Documents\ScrumGroep5\yahtzee\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee.exe
 C:\Users\ljhul\Documents\ScrumGroep5\yahtzee\Yahtzee-Project-Groep5\Yahtzee\obj\Debug\Yahtzee.pdb
-<<<<<<< HEAD
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\bin\Debug\Yahtzee.exe.config
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\bin\Debug\Yahtzee.exe
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\bin\Debug\Yahtzee.pdb
@@ -81,7 +80,6 @@ C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yah
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee.csproj.GenerateResource.cache
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee.exe
 C:\Users\elfri\Documents\Repositories\Yahtzee\Yahtzee-Project-Groep5(master)\Yahtzee\obj\Debug\Yahtzee.pdb
-=======
 >>>>>>> 3243db7a14b6eb0fa676dda4f0ec2100d5da9015
 C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\bin\Debug\Yahtzee.exe.config
 C:\Users\bramv\Documents\ScrumGroep5\yahtzee groep 5\Yahtzee-Project-Groep5\Yahtzee\bin\Debug\Yahtzee.exe
