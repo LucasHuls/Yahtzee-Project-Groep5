@@ -347,5 +347,14 @@ namespace Yahtzee
                 rollen.Opacity = 1;
             }
         }
+
+        private void Yahtzee_Loop(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Het kan even duren!");
+            while (!yahtzeeGegooid)
+            {
+                Rol();
+            }
+        }
     }
 }

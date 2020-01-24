@@ -42,7 +42,7 @@
 
         <!--Knoppen | Standaard knoppen-->
         <Button x:Name="spelregels"     Grid.Column="5" Grid.Row="0" Grid.RowSpan="2" Content="Spelregels"      VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Spelregels_Click"/>
-        <Button x:Name="rollen"         Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" Content="Rol Dobbelsteen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Rollen_Click"/>
+        <Button x:Name="rollen"         Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" Content="Rol Dobbelsteen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Rollen_Click" Visibility="Hidden" Opacity="0"/>
         <Button x:Name="opnieuw"        Grid.Column="6" Grid.Row="0" Grid.RowSpan="2" Content="Speel Opnieuw"   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="NieuwSpel"/>
 
         <!--Teksten-->
@@ -88,6 +88,7 @@
         <Image x:Name="vier" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="10" Grid.RowSpan="2" Grid.Column="3"/>
         <Image x:Name="vijf" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="10" Grid.RowSpan="2" Grid.Column="4"/>
         <Image x:Name="zes"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="10" Grid.RowSpan="2" Grid.Column="5"/>
+        <Button x:Name="Loop"  Grid.RowSpan="2"   Grid.Column="4" Grid.Row="0"  Content="FIX Yathzee"      VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Yahtzee_Loop"/>
 
 
     </Grid>
